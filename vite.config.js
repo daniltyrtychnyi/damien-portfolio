@@ -1,8 +1,11 @@
-import { defineConfig, pluginSsg } from "minista"
+import { defineConfig, pluginSsg, pluginBundle } from "minista"
 import path from 'path'
 
 export default defineConfig({
-  plugins: [pluginSsg()],
+  plugins: [
+      pluginSsg(),
+      pluginBundle(),
+  ],
   resolve: {
     alias: [{
       find: '@/',
