@@ -1,0 +1,49 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  --color-purple-55: #4A2CED;
+  --color-purple-60: #5E43EF;
+  --color-purple-70: #8672F3;
+  --color-purple-80: #AEA1F7;
+  --color-purple-90: #D6D0FB;
+  --color-purple-95: #EAE7FD;
+  --color-purple-97: #F3F1FE;
+  --color-purple-99: #FBFAFF;
+
+  --color-dark-03: #070708;
+  --color-dark-06: #0E0E10;
+  --color-dark-08: #131316;
+  --color-dark-12: #1C1C21;
+  --color-dark-15: #232329;
+  --color-dark-20: #2F2F37;
+  --color-dark-25: #3B3B45;
+  --color-dark-30: #474752;
+
+  --color-grey-40: #62646C;
+  --color-grey-50: #797C86;
+  --color-grey-70: #AFB0B6;
+  --color-grey-80: #CACACE;
+  --color-grey-90: #E4E4E6;
+  --color-grey-95: #F2F2F3;
+  --color-grey-97: #F7F7F8;
+  --color-grey-99: #FCFCFD;
+
+  --font-family-base: 'Manrope', sans-serif;
+
+  --border: 1px solid var(--color-dark-12);
+
+  --border-radius-l: 10px;
+  --border-radius-m: 8px;
+
+  --container-width: #{fluid-to-laptop(
+    $container-desktop-width,
+    $container-laptop-width
+  )};
+  --container-padding-x: 16px;
+
+  --section-padding-y: #{fluid(100, 40)};
+
+  --transition-duration: .2s;
+  --transition-duration-long: .4s;
+}

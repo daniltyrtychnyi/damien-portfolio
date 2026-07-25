@@ -1,0 +1,79 @@
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  @include fluid-text(18, 14);
+
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  color: var(--color-grey-70);
+  background-color: var(--color-dark-03);
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-white);
+}
+
+h1, .h1 {
+  @include fluid-text(80, 40);
+
+  font-weight: 600;
+}
+
+h2, .h2 {
+  @include fluid-text(58, 28);
+
+  font-weight: 600;
+}
+
+h3, .h3 {
+  @include fluid-text(44, 28);
+
+  font-weight: 600;
+}
+
+h4, .h4 {
+  @include fluid-text(22, 16);
+
+  font-weight: 500;
+}
+
+h5, .h5 {
+  @include fluid-text(20, 16);
+
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-purple-60);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+:focus-visible {
+  @include focus-visible;
+}
