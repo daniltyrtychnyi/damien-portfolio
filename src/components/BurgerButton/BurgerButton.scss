@@ -1,0 +1,50 @@
+.burger-button {
+  @include square(68px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  row-gap: 4px;
+  padding: 20px;
+  background-color: transparent;
+  border: var(--border);
+  border-right: none;
+  border-bottom: none;
+  border-radius: 20px 0 0 0;
+
+  @include hover {
+    background-color: var(--color-purple-60);
+  }
+
+  &.is-active {
+    .burger-button__line {
+      &:first-child {
+        transform-origin: 0;
+        rotate: 45deg;
+      }
+
+      &:nth-child(2) {
+        rotate: -45deg;
+        translate: -0.2em 0.1em;
+      }
+
+      &:last-child {
+        translate: 50%;
+        opacity: 0;
+      }
+    }
+  }
+
+  &__line {
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-l);
+    transition-duration: var(--transition-duration-long);
+
+    &:last-child {
+      width: 12px;
+    }
+  }
+}

@@ -23,8 +23,12 @@
     border-inline: var(--border);
   }
 
-  &__menu {
+  &__menu,
+  &__burger-button {
     align-self: flex-end;
+  }
+
+  &__menu {
     font-weight: 500;
 
     &-list {
@@ -62,5 +66,9 @@
         background-color: var(--color-dark-08);
       }
     }
+  }
+
+  &__burger-button {
+    margin-right: calc(var(--container-padding-x) * -1);
   }
 }

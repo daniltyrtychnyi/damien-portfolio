@@ -8,3 +8,9 @@
 .visually-hidden {
   @include visually-hidden;
 }
+
+.visible-tablet {
+  @include tablet-above {
+    display: none !important;
+  }
+}

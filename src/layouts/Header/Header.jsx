@@ -2,6 +2,7 @@ import './Header.scss'
 import Logo from '@/components/Logo'
 import clsx from 'clsx'
 import Button from '@/components/Button'
+import BurgerButton from '@/components/BurgerButton'
 
 const Header = (props) => {
     const {
@@ -57,6 +58,9 @@ const Header = (props) => {
                     className="header__button"
                     href="/contact"
                     label="Contact Me"
+                />
+                <BurgerButton
+                    className="header__burger-button visible-tablet"
                 />
             </div>
         </header>
