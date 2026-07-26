@@ -1,0 +1,16 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: var(--border);
+  animation-name: scroll-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+
+  @keyframes scroll-header {
+    to {
+      background-color: var(--color-dark-03);
+    }
+  }
+}
