@@ -1,6 +1,7 @@
 import './Header.scss'
 import Logo from '@/components/Logo'
 import clsx from 'clsx'
+import Button from '@/components/Button'
 
 const Header = (props) => {
     const {
@@ -52,6 +53,11 @@ const Header = (props) => {
                         ))}
                     </ul>
                 </nav>
+                <Button
+                    className="header__button"
+                    href="/contact"
+                    label="Contact Me"
+                />
             </div>
         </header>
     )

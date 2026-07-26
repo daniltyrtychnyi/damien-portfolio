@@ -1,0 +1,40 @@
+.button {
+  @include flex-center(true);
+
+  position: relative;
+  padding: fluid-to-laptop(16, 14) fluid-to-laptop(24, 20);
+  font-weight: 500;
+  color: var(--color-white);
+  background: var(--color-dark-12);
+  border: none;
+  border-radius: var(--border-radius-l);
+
+  @include laptop {
+    border-radius: var(--border-radius-m);
+  }
+
+  @include hover {
+    color: var(--color-white);
+    background-color: var(--color-purple-60);
+  }
+
+  &::before {
+    --buttonBorderGradientColorStart: var(--color-dark-20);
+    --buttonBorderGradientColorEnd: rgb(47 47 55 / 0);
+
+    @include abs-cover;
+
+    content: '';
+    padding: 1px;
+    pointer-events: none;
+    background-image: linear-gradient(
+            to right bottom,
+            var(--buttonBorderGradientColorStart) 28%,
+            var(--buttonBorderGradientColorEnd) 100%
+    );
+    border-radius: inherit;
+    mask:
+            linear-gradient(var(--color-black) 0 0) content-box exclude,
+            linear-gradient(var(--color-black) 0 0);
+  }
+}
