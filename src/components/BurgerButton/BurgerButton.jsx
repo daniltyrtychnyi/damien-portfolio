@@ -4,6 +4,7 @@ import clsx from 'clsx'
 const BurgerButton = (props) => {
     const {
         className,
+        extraAttrs = {},
     } = props
 
     const title = 'Open menu'
@@ -14,6 +15,7 @@ const BurgerButton = (props) => {
             type="button"
             title={title}
             aria-label={title}
+            {...extraAttrs}
         >
             <span className="burger-button__line"></span>
             <span className="burger-button__line"></span>
