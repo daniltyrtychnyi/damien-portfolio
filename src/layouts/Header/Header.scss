@@ -2,6 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  padding-inline: var(--container-padding-x);
   border-bottom: var(--border);
   animation-name: scroll-header;
   animation-fill-mode: both;
@@ -23,34 +24,106 @@
     border-inline: var(--border);
   }
 
+  &__overlay-menu-dialog {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 16px;
+    padding: var(--container-padding-x);
+    background-color: var(--color-dark-15);
+    border: none;
+    transition-duration: var(--transition-duration);
+    transition-behavior: allow-discrete;
+
+    @include tablet-above {
+      display: contents;
+    }
+
+    @mixin starting-styles {
+      opacity: 0;
+      translate: 100%;
+    }
+
+    &[open] {
+      display: flex;
+
+      .header {
+        &__menu,
+        &__button {
+          font-size: 18px;
+        }
+
+        &__menu {
+          &-item {
+            border-radius: var(--border-radius-l);
+          }
+        }
+
+        &__button {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        @starting-style {
+          @include starting-styles;
+        }
+      }
+    }
+
+    &:not([open]) {
+      @include starting-styles;
+    }
+  }
+
   &__menu,
   &__burger-button {
-    align-self: flex-end;
+    @include tablet-above {
+      align-self: flex-end;
+    }
   }
 
   &__menu {
     font-weight: 500;
 
+    @include tablet {
+      overflow-y: auto;
+    }
+
     &-list {
       display: flex;
+
+      @include tablet {
+        flex-direction: column;
+        row-gap: 5px;
+        margin-block: auto;
+      }
     }
 
     &-item {
-      border-top: var(--border);
-      border-left: var(--border);
+      @include tablet-above {
+        border-top: var(--border);
+        border-left: var(--border);
 
-      &:first-child {
-        border-radius: 12px 0 0 0;
-      }
+        &:first-child {
+          border-radius: 12px 0 0 0;
+        }
 
-      &:last-child {
-        border-right: var(--border);
-        border-radius: 0 12px 0 0;
+        &:last-child {
+          border-right: var(--border);
+          border-radius: 0 12px 0 0;
+        }
       }
     }
 
     &-link {
+      @include flex-center;
+
       padding: fluid-to-laptop(30, 24) fluid-to-laptop(40, 30);
+      color: var(--color-grey-70);
       border-radius: inherit;
 
       @include hover {
@@ -69,6 +142,7 @@
   }
 
   &__burger-button {
+    position: relative;
     margin-right: calc(var(--container-padding-x) * -1);
   }
 }

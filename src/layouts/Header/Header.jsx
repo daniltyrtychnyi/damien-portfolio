@@ -35,30 +35,32 @@ const Header = (props) => {
                     className="header__logo"
                     loading="eager"
                 />
-                <nav className="header__menu">
-                    <ul className="header__menu-list">
-                        {menuItems.map(({ label, href }, index) => (
-                            <li
-                                className="header__menu-item"
-                                key={index}
-                            >
-                                <a
-                                    className={clsx('header__menu-link', {
-                                        'is-active': href === url,
-                                    })}
-                                    href={href}
+                <dialog className="header__overlay-menu-dialog">
+                    <nav className="header__menu">
+                        <ul className="header__menu-list">
+                            {menuItems.map(({label, href}, index) => (
+                                <li
+                                    className="header__menu-item"
+                                    key={index}
                                 >
-                                    {label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-                <Button
-                    className="header__button"
-                    href="/contact"
-                    label="Contact Me"
-                />
+                                    <a
+                                        className={clsx('header__menu-link', {
+                                            'is-active': href === url,
+                                        })}
+                                        href={href}
+                                    >
+                                        {label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                    <Button
+                        className="header__button"
+                        href="/contact"
+                        label="Contact Me"
+                    />
+                </dialog>
                 <BurgerButton
                     className="header__burger-button visible-tablet"
                 />

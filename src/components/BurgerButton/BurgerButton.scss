@@ -18,6 +18,9 @@
   }
 
   &.is-active {
+    border: none;
+    border-radius: var(--border-radius-l);
+
     .burger-button__line {
       &:first-child {
         transform-origin: 0;
