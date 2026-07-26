@@ -14,7 +14,7 @@
   visibility: visible;
 }
 
-@mixin flex-center($isInline) {
+@mixin flex-center($isInline: false) {
   @if ($isInline) {
     display: inline-flex;
   } @else {
