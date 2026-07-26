@@ -13,4 +13,54 @@
       background-color: var(--color-dark-03);
     }
   }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+    padding: fluid(30, 10) fluid(40, 16) 0;
+    border-inline: var(--border);
+  }
+
+  &__menu {
+    align-self: flex-end;
+    font-weight: 500;
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      border-top: var(--border);
+      border-left: var(--border);
+
+      &:first-child {
+        border-radius: 12px 0 0 0;
+      }
+
+      &:last-child {
+        border-right: var(--border);
+        border-radius: 0 12px 0 0;
+      }
+    }
+
+    &-link {
+      padding: fluid-to-laptop(30, 24) fluid-to-laptop(40, 30);
+      border-radius: inherit;
+
+      @include hover {
+        color: var(--color-white);
+        background-color: var(--color-purple-60);
+      }
+
+      &.is-active {
+        padding-inline: fluid-to-laptop(50, 40);
+        pointer-events: none;
+        user-select: none;
+        color: var(--color-white);
+        background-color: var(--color-dark-08);
+      }
+    }
+  }
 }

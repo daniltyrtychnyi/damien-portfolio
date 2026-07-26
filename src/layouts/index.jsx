@@ -7,6 +7,7 @@ import Footer from './Footer'
 export default (props) => {
     const {
         title,
+        url,
         children,
     } = props
 
@@ -20,7 +21,7 @@ export default (props) => {
                 <link rel="manifest" href="/site.webmanifest"/>
                 <script src="/src/main.js" type="module"/>
             </Head>
-            <Header />
+            <Header url={url} />
             <Content>
                 {children}
             </Content>
