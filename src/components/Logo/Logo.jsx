@@ -12,6 +12,7 @@ const Logo = (props) => {
     return (
         <a
             className={clsx(className, 'logo')}
+            href="/"
             title={title}
             aria-label={title}
         >
