@@ -1,0 +1,92 @@
+.footer {
+  overflow: hidden;
+
+  &__main {
+    @include tablet-above {
+      position: relative;
+      display: grid;
+      grid-template-columns: 41% auto;
+    }
+
+    &::before,
+    &::after {
+      @include laptop-above {
+        @include square(fluid-to-laptop(200, 187));
+
+        content: '';
+        position: absolute;
+        top: 25%;
+        background: url('@/assets/images/footer/decor.svg') center/cover no-repeat;
+      }
+    }
+
+    &::before {
+      left: 0;
+      translate: -80%;
+    }
+
+    &::after {
+      right: 0;
+      translate: 80%;
+      rotate: 180deg;
+    }
+
+    &-column {
+      padding: fluid(100, 40) fluid(80, 20);
+      border-right: var(--border);
+
+      @include tablet {
+        &:not(:first-child) {
+          border-left: var(--border);
+        }
+
+        &:not(:last-child) {
+          border-bottom: var(--border);
+        }
+      }
+
+      &:first-child {
+        border-left: var(--border);
+      }
+    }
+  }
+
+  &__menu {
+    --columns: 4;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: 40px 50px;
+
+    @include laptop {
+      --columns: 2;
+    }
+
+    &-column,
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &-column {
+      row-gap: fluid(20, 14);
+      text-transform: uppercase;
+    }
+
+    &-title {
+      font-weight: 600;
+      color: var(--color-grey-50);
+    }
+
+    &-list {
+      row-gap: fluid-to-laptop(6, 4);
+    }
+
+    &-link {
+      padding-bottom: 6px;
+      color: var(--color-grey-95);
+      border-bottom: 1px solid var(--color-dark-20);
+    }
+  }
+}
