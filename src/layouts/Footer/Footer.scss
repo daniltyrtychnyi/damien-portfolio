@@ -1,7 +1,10 @@
 .footer {
   overflow: hidden;
+  color: var(--color-grey-50);
 
   &__main {
+    text-transform: uppercase;
+
     @include tablet-above {
       position: relative;
       display: grid;
@@ -51,6 +54,17 @@
     }
   }
 
+  &__subtitle {
+    @include fluid-text(20, 14);
+
+    margin-bottom: fluid(60, 20);
+  }
+
+  &__subtitle,
+  &__menu-title {
+    font-weight: 600;
+  }
+
   &__menu {
     --columns: 4;
 
@@ -71,12 +85,6 @@
 
     &-column {
       row-gap: fluid(20, 14);
-      text-transform: uppercase;
-    }
-
-    &-title {
-      font-weight: 600;
-      color: var(--color-grey-50);
     }
 
     &-list {
@@ -85,6 +93,7 @@
 
     &-link {
       padding-bottom: 6px;
+      font-weight: 500;
       color: var(--color-grey-95);
       border-bottom: 1px solid var(--color-dark-20);
 
@@ -95,7 +104,6 @@
   }
 
   &__extra {
-    color: var(--color-grey-50);
     text-align: center;
     border-top: var(--border);
 

@@ -1,5 +1,6 @@
 import './Footer.scss'
 import Socials from '@/components/Socials'
+import Action from '@/components/Action'
 
 const Footer = () => {
     const menuItems = [
@@ -42,6 +43,15 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer__main container">
                 <div className="footer__main-column">
+                    <p className="footer__subtitle">
+                        A more meaningful home for photography
+                    </p>
+                    <Action
+                        className="footer__action"
+                        href="/"
+                        title="Let’s"
+                        subTitle="Work Together"
+                    />
                 </div>
                 <div className="footer__main-column">
                     <nav className="footer__menu">
