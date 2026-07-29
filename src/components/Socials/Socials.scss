@@ -1,0 +1,13 @@
+.soc1als {
+  display: inline-flex;
+  padding: fluid-to-laptop(10, 8);
+  background-color: var(--color-dark-03);
+  border: var(--border);
+  border-radius: 100px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: fluid-to-laptop(10, 8);
+  }
+}
