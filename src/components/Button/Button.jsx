@@ -1,6 +1,7 @@
 import './Button.scss'
 import clsx from 'clsx'
 import Icon from '../Icon'
+import getPropsFromPolymorphicTag from '@/utils/getPropsFromPolymorphicTag'
 
 const Button = (props) => {
     const {
@@ -21,11 +22,7 @@ const Button = (props) => {
         iconPosition = 'before',
     } = props
 
-    const isLink = href !== undefined
-    const Component = isLink ? 'a' : 'button'
-    const linkProps = {href, target}
-    const buttonProps = {type}
-    const specificProps = isLink ? linkProps : buttonProps
+    const { Component, specificProps } = getPropsFromPolymorphicTag(href, target, type)
     const title = isLabelVisible ? label : undefined
     const iconComponent = iconName && (
         <Icon
