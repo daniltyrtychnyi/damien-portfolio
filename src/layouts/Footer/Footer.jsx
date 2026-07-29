@@ -1,4 +1,5 @@
 import './Footer.scss'
+import Socials from '@/components/Socials'
 
 const Footer = () => {
     const menuItems = [
@@ -17,6 +18,23 @@ const Footer = () => {
         {
             title: 'Services',
             links: ['Portraits', 'Events', 'Commercial'],
+        },
+    ]
+
+    const extraLinks = ['Terms & Conditions', 'Privacy Policy']
+
+    const socialsLinks = [
+        {
+          label: 'Facebook',
+          iconName: 'facebook',
+        },
+        {
+            label: 'Twitter',
+            iconName: 'twitter',
+        },
+        {
+            label: 'LinkedIn',
+            iconName: 'linked-in',
         },
     ]
 
@@ -48,7 +66,26 @@ const Footer = () => {
                     </nav>
                 </div>
             </div>
-            <div className="footer__extra"></div>
+            <div className="footer__extra">
+                <div className="footer__extra-inner container">
+                    <ul className="footer__extra-list">
+                        {extraLinks.map((link, index) => (
+                            <li className="footer__extra-item" key={index}>
+                                <a href="/" className="footer__extra-link">
+                                    {link}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                    <Socials
+                        className="footer__soc1als"
+                        links={socialsLinks}
+                    />
+                    <p className="footer__copyright">
+                        &copy; <time dateTime="2024">2024</time> Damien Braun Photography. All rights reserved.
+                    </p>
+                </div>
+            </div>
         </footer>
     )
 }

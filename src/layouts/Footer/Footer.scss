@@ -87,6 +87,48 @@
       padding-bottom: 6px;
       color: var(--color-grey-95);
       border-bottom: 1px solid var(--color-dark-20);
+
+      @include hover {
+        border-color: var(--color-purple-60);
+      }
+    }
+  }
+
+  &__extra {
+    color: var(--color-grey-50);
+    text-align: center;
+    border-top: var(--border);
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-block: 20px;
+
+      @include tablet {
+        flex-direction: column;
+      }
+    }
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          margin-inline: fluid-to-laptop(11, 8);
+          border-right: var(--border);
+        }
+      }
+    }
+  }
+
+  &__soc1als {
+    @include tablet {
+      order: 1;
     }
   }
 }
