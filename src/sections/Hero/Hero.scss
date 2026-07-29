@@ -1,4 +1,6 @@
 .hero {
+  padding-bottom: var(--section-padding-y);
+
   &__main {
     display: flex;
     justify-content: space-between;
