@@ -36,7 +36,7 @@
     padding: var(--container-padding-x);
     background-color: var(--color-dark-15);
     border: none;
-    transition-duration: var(--transition-duration-long);
+    transition-duration: var(--transition-duration);
     transition-behavior: allow-discrete;
 
     @include tablet-above {
