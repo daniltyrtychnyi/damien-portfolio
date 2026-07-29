@@ -37,4 +37,9 @@
             linear-gradient(var(--color-black) 0 0) content-box exclude,
             linear-gradient(var(--color-black) 0 0);
   }
+
+  &--circle {
+    padding: fluid-to-laptop(14, 10);
+    border-radius: 50%;
+  }
 }
