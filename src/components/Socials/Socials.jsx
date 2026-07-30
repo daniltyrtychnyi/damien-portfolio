@@ -5,13 +5,27 @@ import Button from '../Button'
 const Socials = (props) => {
     const {
         className,
-        links = [],
     } = props
+
+    const socialsLinks = [
+        {
+            label: 'Facebook',
+            iconName: 'facebook',
+        },
+        {
+            label: 'Twitter',
+            iconName: 'twitter',
+        },
+        {
+            label: 'LinkedIn',
+            iconName: 'linked-in',
+        },
+    ]
 
     return (
         <div className={clsx(className, 'soc1als')}>
             <ul className="soc1als__list">
-                {links.map(({ label, iconName }, index) => (
+                {socialsLinks.map(({ label, iconName }, index) => (
                     <li className="soc1als__item" key={index}>
                         <Button
                             className="soc1als__link"

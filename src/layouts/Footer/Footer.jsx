@@ -24,21 +24,6 @@ const Footer = () => {
 
     const extraLinks = ['Terms & Conditions', 'Privacy Policy']
 
-    const socialsLinks = [
-        {
-          label: 'Facebook',
-          iconName: 'facebook',
-        },
-        {
-            label: 'Twitter',
-            iconName: 'twitter',
-        },
-        {
-            label: 'LinkedIn',
-            iconName: 'linked-in',
-        },
-    ]
-
     return (
         <footer className="footer">
             <div className="footer__main container">
@@ -89,7 +74,6 @@ const Footer = () => {
                     </ul>
                     <Socials
                         className="footer__soc1als"
-                        links={socialsLinks}
                     />
                     <p className="footer__copyright">
                         &copy; <time dateTime="2024">2024</time> Damien Braun Photography. All rights reserved.
