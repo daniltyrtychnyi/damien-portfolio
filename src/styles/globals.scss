@@ -41,12 +41,18 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  @include fluid-text(22, 16);
+  @include fluid-text(30, 20);
 
   font-weight: 500;
 }
 
 h5, .h5 {
+  @include fluid-text(22, 16);
+
+  font-weight: 500;
+}
+
+h6, .h6 {
   @include fluid-text(20, 16);
 
   font-weight: 500;
