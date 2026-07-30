@@ -30,6 +30,9 @@ const Hero = () => {
                     subTitle="Work Together"
                 />
             </div>
+            <h2 className="visually-hidden">
+                Shooting options
+            </h2>
             <Marquee
                 className="hero__marquee"
             />
