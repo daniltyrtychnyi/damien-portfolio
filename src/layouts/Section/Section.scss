@@ -2,19 +2,37 @@
   display: flex;
   flex-direction: column;
   row-gap: fluid(80, 40);
+  padding-block: var(--section-padding-y);
 
   &__header {
     padding-bottom: fluid(50, 20);
     border-bottom: var(--border);
 
-    @include tablet {
-      flex-direction: column;
-    }
-
     &:has(.section__actions) {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
+
+      @include tablet {
+        flex-direction: column;
+        align-items: start;
+      }
     }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: fluid-to-laptop(4, 2);
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    @include fluid-text(20, 14);
+
+    font-weight: 600;
+    color: var(--color-grey-50);
   }
 }
