@@ -20,6 +20,7 @@ const Button = (props) => {
          * 'before' | 'after'
          */
         iconPosition = 'before',
+        download,
     } = props
 
     const { Component, specificProps } = getPropsFromPolymorphicTag(href, target, type)
@@ -39,6 +40,7 @@ const Button = (props) => {
             {...specificProps}
             title={title}
             aria-label={title}
+            download={download}
         >
             {iconPosition === 'before' && iconComponent}
             {!isLabelVisible && (
