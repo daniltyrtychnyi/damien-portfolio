@@ -1,6 +1,6 @@
 import Icon from '@/components/Icon'
 
-const MarqueeList = (props) => {
+export default (props) => {
     const {
         hidden = false,
         labels = [],
@@ -24,5 +24,3 @@ const MarqueeList = (props) => {
         </ul>
     )
 }
-
-export default MarqueeList

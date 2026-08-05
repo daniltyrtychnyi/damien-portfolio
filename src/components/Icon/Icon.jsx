@@ -2,7 +2,7 @@ import './Icon.scss'
 import clsx from 'clsx'
 import { Sprite } from 'minista/assets'
 
-const Icon = (props) => {
+export default (props) => {
     const {
         className,
         name,
@@ -16,5 +16,3 @@ const Icon = (props) => {
         </span>
     )
 }
-
-export default Icon

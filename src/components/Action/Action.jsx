@@ -3,7 +3,7 @@ import getPropsFromPolymorphicTag from "@/utils/getPropsFromPolymorphicTag"
 import clsx from 'clsx'
 import Icon from '../Icon'
 
-const Action = (props) => {
+export default (props) => {
     const {
         className,
         href,
@@ -40,5 +40,3 @@ const Action = (props) => {
         </Component>
     )
 }
-
-export default Action

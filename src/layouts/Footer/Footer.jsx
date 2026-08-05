@@ -2,7 +2,7 @@ import './Footer.scss'
 import Socials from '@/components/Socials'
 import Action from '@/components/Action'
 
-const Footer = () => {
+export default () => {
     const menuItems = [
         {
           title: 'Home',
@@ -83,5 +83,3 @@ const Footer = () => {
         </footer>
     )
 }
-
-export default Footer

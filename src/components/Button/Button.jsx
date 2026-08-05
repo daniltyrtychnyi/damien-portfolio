@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import Icon from '../Icon'
 import getPropsFromPolymorphicTag from '@/utils/getPropsFromPolymorphicTag'
 
-const Button = (props) => {
+export default (props) => {
     const {
         className,
         type = 'button',
@@ -52,5 +52,3 @@ const Button = (props) => {
         </Component>
     )
 }
-
-export default Button

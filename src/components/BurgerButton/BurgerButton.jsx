@@ -1,7 +1,7 @@
 import './BurgerButton.scss'
 import clsx from 'clsx'
 
-const BurgerButton = (props) => {
+export default (props) => {
     const {
         className,
         extraAttrs = {},
@@ -23,5 +23,3 @@ const BurgerButton = (props) => {
         </button>
     )
 }
-
-export default BurgerButton

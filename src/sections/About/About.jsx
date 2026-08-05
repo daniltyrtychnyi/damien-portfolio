@@ -4,7 +4,7 @@ import Button from '@/components/Button'
 import {Image} from 'minista/assets'
 import Socials from '@/components/Socials'
 
-const About = () => {
+export default () => {
     return (
         <Section
             className="about"
@@ -84,5 +84,3 @@ const About = () => {
         </Section>
     )
 }
-
-export default About

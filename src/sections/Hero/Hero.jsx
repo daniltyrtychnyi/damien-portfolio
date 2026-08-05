@@ -4,7 +4,7 @@ import Action from '@/components/Action'
 import bgImage from '@/assets/images/hero/hero-bg.png'
 import Marquee from '@/components/Marquee'
 
-const Hero = () => {
+export default () => {
     const titleId = "hero-title"
 
     return (
@@ -48,5 +48,3 @@ const Hero = () => {
         </section>
     )
 }
-
-export default Hero

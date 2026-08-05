@@ -1,7 +1,7 @@
 import './Logo.scss'
 import clsx from 'clsx'
 
-const Logo = (props) => {
+export default (props) => {
     const {
         className,
         loading = 'lazy',
@@ -27,5 +27,3 @@ const Logo = (props) => {
         </a>
     )
 }
-
-export default Logo

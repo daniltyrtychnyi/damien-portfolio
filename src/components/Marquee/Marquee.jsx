@@ -2,7 +2,7 @@ import './Marquee.scss'
 import clsx from 'clsx'
 import MarqueeList from './components/MarqueeList'
 
-const Marquee = (props) => {
+export default (props) => {
     const {
         className,
     } = props
@@ -29,5 +29,3 @@ const Marquee = (props) => {
         </div>
     )
 }
-
-export default Marquee

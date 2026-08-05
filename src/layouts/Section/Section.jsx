@@ -1,7 +1,7 @@
 import './Section.scss'
 import clsx from 'clsx'
 
-const Section = (props) => {
+export default (props) => {
     const {
         className,
         titleId,
@@ -37,5 +37,3 @@ const Section = (props) => {
         </section>
     )
 }
-
-export default Section

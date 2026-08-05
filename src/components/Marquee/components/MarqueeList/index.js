@@ -1,3 +1,1 @@
-import MarqueeList from './MarqueeList'
-
-export default MarqueeList
+export { default } from './MarqueeList'

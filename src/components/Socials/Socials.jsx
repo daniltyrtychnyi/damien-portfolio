@@ -2,7 +2,7 @@ import './Socials.scss'
 import clsx from 'clsx'
 import Button from '../Button'
 
-const Socials = (props) => {
+export default (props) => {
     const {
         className,
     } = props
@@ -42,5 +42,3 @@ const Socials = (props) => {
         </div>
     )
 }
-
-export default Socials

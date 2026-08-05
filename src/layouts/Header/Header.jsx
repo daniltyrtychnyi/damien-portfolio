@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import Button from '@/components/Button'
 import BurgerButton from '@/components/BurgerButton'
 
-const Header = (props) => {
+export default (props) => {
     const {
         url,
     } = props
@@ -71,5 +71,3 @@ const Header = (props) => {
         </header>
     )
 }
-
-export default Header
