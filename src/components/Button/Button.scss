@@ -1,6 +1,7 @@
 .button {
   @include flex-center(true);
 
+  column-gap: 5px;
   position: relative;
   padding: fluid-to-laptop(16, 14) fluid-to-laptop(24, 20);
   font-weight: 500;

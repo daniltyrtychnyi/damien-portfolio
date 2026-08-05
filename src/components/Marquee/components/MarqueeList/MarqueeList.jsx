@@ -14,6 +14,7 @@ export default (props) => {
                         <Icon
                             className="marquee__icon"
                             name="star"
+                            hasFill
                         />
                         <p className="marquee__label">
                             {label}

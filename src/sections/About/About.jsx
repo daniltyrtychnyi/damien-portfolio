@@ -15,7 +15,10 @@ export default () => {
                 <Button
                     className="about__button"
                     href="/"
-                    label="Know More ->"
+                    label="Know More"
+                    iconName="arrow-right-long"
+                    iconPosition="after"
+                    hasFill
                 />
             }
         >

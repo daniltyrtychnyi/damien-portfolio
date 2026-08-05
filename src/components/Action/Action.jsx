@@ -33,6 +33,7 @@ export default (props) => {
                     <Icon
                         className="action__icon"
                         name="arrow-top-right"
+                        hasFill
                     />
                 </span>
             </span>
