@@ -22,6 +22,7 @@ export default (props) => {
         iconPosition = 'before',
         download,
         hasFill,
+        extraAttrs,
     } = props
 
     const { Component, specificProps } = getPropsFromPolymorphicTag(href, target, type)
@@ -43,6 +44,7 @@ export default (props) => {
             title={title}
             aria-label={title}
             download={download}
+            {...extraAttrs}
         >
             {iconPosition === 'before' && iconComponent}
             {!isLabelVisible && (
