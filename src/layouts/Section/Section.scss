@@ -37,7 +37,7 @@
   }
 
   &__actions {
-    &:has(.slider__navigation) {
+    &:has(.section__slider-navigation) {
       display: flex;
       align-items: center;
       column-gap: fluid-to-laptop(30, 20);
