@@ -10,13 +10,19 @@ export default (props) => {
         type,
         title,
         subTitle,
+        /**
+         * '' (default) | 'grey-50'
+         */
+        mode = '',
     } = props
 
     const { Component, specificProps } = getPropsFromPolymorphicTag(href, type)
 
     return (
         <Component
-            className={clsx(className, 'action')}
+            className={clsx(className, 'action', {
+                [`action--${mode}`]: mode,
+            })}
             {...specificProps}
         >
             <span className="action__top">

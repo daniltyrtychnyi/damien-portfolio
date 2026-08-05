@@ -42,4 +42,16 @@
       box-shadow: inset 4px 4px 17px 0 rgb(255 255 255 / 0.3);
     }
   }
+
+  &--grey-50 {
+    .action {
+      &__title {
+        color: var(--color-grey-50);
+      }
+
+      &__top {
+        column-gap: fluid(16, 4);
+      }
+    }
+  }
 }
