@@ -43,6 +43,8 @@ const serviceSlides = [
     },
 ]
 
+const sliderId = 'services-slider'
+
 export default () => {
     return (
         <Section
@@ -53,7 +55,8 @@ export default () => {
             actions={
                 <>
                     <SliderNavigation
-                        className="slider__navigation"
+                        className="section__slider-navigation"
+                        id={sliderId}
                     />
                     <Button
                         className="services__button"
@@ -66,7 +69,9 @@ export default () => {
                 </>
             }
         >
-            <Slider>
+            <Slider
+                navigationTargetElementId={sliderId}
+            >
                 {serviceSlides.map(({title, description, imgSrc, features}, index) => (
                     <div className="services__wrapper" key={index}>
                         <div className="services__main">
@@ -93,6 +98,7 @@ export default () => {
                                             <Icon
                                                 className="services__icon"
                                                 name="star-dark-30"
+                                                hasFill
                                             />
                                             <p className="services__features">
                                                 {feature}

@@ -1,0 +1,19 @@
+.slider-navigation {
+  display: flex;
+  align-items: center;
+  column-gap: fluid-to-laptop(16, 12);
+  padding: fluid-to-laptop(10, 8);
+  background-color: var(--color-dark-03);
+  border: var(--border);
+  border-radius: 100px;
+
+  &__button {
+    @include square(fluid-to-laptop(62, 48));
+
+    border-radius: 50%;
+
+    .button__icon {
+      --iconSize: #{fluid-to-laptop(34, 28)};
+    }
+  }
+}
