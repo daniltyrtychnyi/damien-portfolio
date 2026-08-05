@@ -21,6 +21,7 @@ export default (props) => {
          */
         iconPosition = 'before',
         download,
+        hasFill,
     } = props
 
     const { Component, specificProps } = getPropsFromPolymorphicTag(href, target, type)
@@ -29,6 +30,7 @@ export default (props) => {
         <Icon
             className="button__icon"
             name={iconName}
+            hasFill={hasFill}
         />
     )
 
