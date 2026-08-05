@@ -8,6 +8,10 @@
 
   @include hover {
     opacity: 0.7;
+
+    .action__icon {
+      rotate: 45deg;
+    }
   }
 
   &__top {
@@ -26,6 +30,8 @@
 
   &__icon {
     --iconSize: #{fluid(30, 20)};
+
+    transition-duration: var(--transition-duration);
 
     &-wrapper {
       @include flex-center;
