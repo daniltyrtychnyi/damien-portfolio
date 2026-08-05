@@ -35,6 +35,7 @@ export default (props) => {
                             label={label}
                             isLabelVisible
                             iconName={iconName}
+                            hasFill
                         />
                     </li>
                 ))}
