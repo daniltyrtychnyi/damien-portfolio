@@ -6,11 +6,16 @@ export default (props) => {
     const {
         className,
         id,
+        laptopHidden = false,
+        laptopVisible = false,
     } = props
 
     return (
         <div
-            className={clsx(className, "slider-navigation")}
+            className={clsx(className, "slider-navigation", {
+                'hidden-laptop': laptopHidden,
+                'visible-laptop': laptopVisible,
+            })}
             id={id}
             data-js-slider-navigation=""
         >

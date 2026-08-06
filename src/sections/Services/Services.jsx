@@ -55,8 +55,9 @@ export default () => {
             actions={
                 <>
                     <SliderNavigation
-                        className="section__slider-navigation hidden-laptop"
+                        className="section__slider-navigation"
                         id={sliderId}
+                        laptopHidden
                     />
                     <Button
                         className="services__button"
@@ -71,6 +72,7 @@ export default () => {
         >
             <Slider
                 navigationTargetElementId={sliderId}
+                laptopVisible
             >
                 {serviceSlides.map(({title, description, imgSrc, features}, index) => (
                     <div className="services__wrapper" key={index}>
