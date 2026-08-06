@@ -55,7 +55,6 @@ export default () => {
             actions={
                 <>
                     <SliderNavigation
-                        className="section__slider-navigation"
                         id={sliderId}
                         laptopHidden
                     />

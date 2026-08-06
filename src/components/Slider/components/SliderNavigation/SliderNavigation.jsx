@@ -4,7 +4,6 @@ import Button from '@/components/Button'
 
 export default (props) => {
     const {
-        className,
         id,
         laptopHidden = false,
         laptopVisible = false,
@@ -12,7 +11,7 @@ export default (props) => {
 
     return (
         <div
-            className={clsx(className, "slider-navigation", {
+            className={clsx("slider-navigation", {
                 'hidden-laptop': laptopHidden,
                 'visible-laptop': laptopVisible,
             })}
