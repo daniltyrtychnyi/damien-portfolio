@@ -1,5 +1,7 @@
 import './Section.scss'
 import clsx from 'clsx'
+import SliderNavigation from '@/components/Slider/components/SliderNavigation'
+import Button from '@/components/Button'
 
 export default (props) => {
     const {
@@ -7,7 +9,8 @@ export default (props) => {
         titleId,
         subTitle,
         title,
-        actions,
+        sliderProps = null,
+        buttonProps = null,
         children,
     } = props
 
@@ -25,9 +28,24 @@ export default (props) => {
                         {title}
                     </h2>
                 </div>
-                {actions && (
+                {(sliderProps || buttonProps) && (
                     <div className="section__actions">
-                        {actions}
+                        {sliderProps && (
+                            <SliderNavigation
+                                id={sliderProps.sliderId}
+                                laptopHidden
+                            />
+                        )}
+                        {buttonProps && (
+                            <Button
+                                className="section__button"
+                                href="/"
+                                label={buttonProps.label}
+                                iconName="arrow-right-long"
+                                iconPosition="after"
+                                hasFill
+                            />
+                        )}
                     </div>
                 )}
             </header>

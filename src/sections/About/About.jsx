@@ -11,16 +11,9 @@ export default () => {
             titleId="about-title"
             subTitle="About"
             title="I am Damien"
-            actions={
-                <Button
-                    className="about__button"
-                    href="/"
-                    label="Know More"
-                    iconName="arrow-right-long"
-                    iconPosition="after"
-                    hasFill
-                />
-            }
+            buttonProps={{
+                label: "Know More"
+            }}
         >
             <div className="about__main">
                 <Image

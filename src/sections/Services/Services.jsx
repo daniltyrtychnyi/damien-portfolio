@@ -1,47 +1,10 @@
 import './Services.scss'
 import Section from '@/layouts/Section'
-import Button from '@/components/Button'
 import Action from '@/components/Action'
 import {Image} from 'minista/assets'
 import Icon from '@/components/Icon'
 import Slider from '@/components/Slider'
-import SliderNavigation from '@/components/Slider/components/SliderNavigation'
-
-const serviceSlides = [
-    {
-        title: 'Events',
-        description: 'Our event photography service is dedicated to capturing the magic of your special occasions. Whether it\'s a wedding, corporate event, or milestone celebration, we\'re there to document every heartfelt moment. We blend into the background, ensuring natural and candid shots that reflect the emotions of the day.',
-        imgSrc: '/src/assets/images/services/1.jpg',
-        features: [
-            'Coverage for weddings, parties, corporate functions, and more.',
-            'Skilled photographers who know how to seize the moment.',
-            'A mix of candid and posed shots for a comprehensive story.',
-            'Quick turnaround for you to relive the day\'s highlights.',
-        ],
-    },
-    {
-        title: 'Events',
-        description: 'Our event photography service is dedicated to capturing the magic of your special occasions. Whether it\'s a wedding, corporate event, or milestone celebration, we\'re there to document every heartfelt moment. We blend into the background, ensuring natural and candid shots that reflect the emotions of the day.',
-        imgSrc: '/src/assets/images/services/1.jpg',
-        features: [
-            'Coverage for weddings, parties, corporate functions, and more.',
-            'Skilled photographers who know how to seize the moment.',
-            'A mix of candid and posed shots for a comprehensive story.',
-            'Quick turnaround for you to relive the day\'s highlights.',
-        ],
-    },
-    {
-        title: 'Events',
-        description: 'Our event photography service is dedicated to capturing the magic of your special occasions. Whether it\'s a wedding, corporate event, or milestone celebration, we\'re there to document every heartfelt moment. We blend into the background, ensuring natural and candid shots that reflect the emotions of the day.',
-        imgSrc: '/src/assets/images/services/1.jpg',
-        features: [
-            'Coverage for weddings, parties, corporate functions, and more.',
-            'Skilled photographers who know how to seize the moment.',
-            'A mix of candid and posed shots for a comprehensive story.',
-            'Quick turnaround for you to relive the day\'s highlights.',
-        ],
-    },
-]
+import servicesItems from './servicesItems'
 
 const sliderId = 'services-slider'
 
@@ -52,28 +15,19 @@ export default () => {
             titleId="services-title"
             subTitle="Services"
             title="My Photography Services"
-            actions={
-                <>
-                    <SliderNavigation
-                        id={sliderId}
-                        laptopHidden
-                    />
-                    <Button
-                        className="services__button"
-                        href="/"
-                        label="View All Services"
-                        iconName="arrow-right-long"
-                        iconPosition="after"
-                        hasFill
-                    />
-                </>
-            }
+            sliderProps={{
+                sliderId,
+                laptopHidden: true,
+            }}
+            buttonProps={{
+                label: "View All Services",
+            }}
         >
             <Slider
                 navigationTargetElementId={sliderId}
                 laptopVisible
             >
-                {serviceSlides.map(({title, description, imgSrc, features}, index) => (
+                {servicesItems.map(({title, description, imgSrc, features}, index) => (
                     <div className="services__wrapper" key={index}>
                         <div className="services__main">
                             <div className="services__info">

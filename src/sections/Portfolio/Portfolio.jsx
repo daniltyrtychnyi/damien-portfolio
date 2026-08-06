@@ -1,67 +1,10 @@
 import Section from '@/layouts/Section'
-import SliderNavigation from '@/components/Slider/components/SliderNavigation'
-import Button from '@/components/Button'
 import PortfolioCard from '@/components/PortfolioCard'
 import Slider from '@/components/Slider'
+import portfolioItems from './portfolioItems'
 
 const sliderId = 'portfolio-slider-navigation'
 
-const portfolioSlides = [
-    {
-        imgSrc: '/src/assets/images/portfolio/1.jpg',
-        title: 'Faces of Resilience',
-        date: 'March 2022',
-        dateTime: '2022-03',
-    },
-    {
-        imgSrc: '/src/assets/images/portfolio/2.jpg',
-        title: 'A Wedding Tale',
-        date: 'January 2020',
-        dateTime: '2022-01',
-    },
-    {
-        imgSrc: '/src/assets/images/portfolio/3.jpg',
-        title: 'Product Elegance',
-        date: 'January 2020',
-        dateTime: '2022-01',
-    },
-    {
-        imgSrc: '/src/assets/images/portfolio/1.jpg',
-        title: 'Faces of Resilience',
-        date: 'March 2022',
-        dateTime: '2022-03',
-    },
-    {
-        imgSrc: '/src/assets/images/portfolio/2.jpg',
-        title: 'A Wedding Tale',
-        date: 'January 2020',
-        dateTime: '2022-01',
-    },
-    {
-        imgSrc: '/src/assets/images/portfolio/3.jpg',
-        title: 'Product Elegance',
-        date: 'January 2020',
-        dateTime: '2022-01',
-    },
-    {
-        imgSrc: '/src/assets/images/portfolio/1.jpg',
-        title: 'Faces of Resilience',
-        date: 'March 2022',
-        dateTime: '2022-03',
-    },
-    {
-        imgSrc: '/src/assets/images/portfolio/2.jpg',
-        title: 'A Wedding Tale',
-        date: 'January 2020',
-        dateTime: '2022-01',
-    },
-    {
-        imgSrc: '/src/assets/images/portfolio/3.jpg',
-        title: 'Product Elegance',
-        date: 'January 2020',
-        dateTime: '2022-01',
-    },
-]
 export default () => {
     return (
         <Section
@@ -69,22 +12,13 @@ export default () => {
             titleId="portfolio-title"
             subTitle="Portfolio"
             title="Explore My photography work."
-            actions={
-                <>
-                    <SliderNavigation
-                        id={sliderId}
-                        laptopHidden
-                    />
-                    <Button
-                        className="portfolio__button"
-                        href="/"
-                        label="View All Works"
-                        iconName="arrow-right-long"
-                        iconPosition="after"
-                        hasFill
-                    />
-                </>
-            }
+            sliderProps={{
+                sliderId,
+                laptopHidden: true,
+            }}
+            buttonProps={{
+                label: "View All Works",
+            }}
         >
             <Slider
                 navigationTargetElementId={sliderId}
@@ -121,9 +55,9 @@ export default () => {
                 }}
                 laptopVisible
             >
-                {portfolioSlides.map((portfolioSlide, index) => (
+                {portfolioItems.map((portfolioItem, index) => (
                     <PortfolioCard
-                        {...portfolioSlide}
+                        {...portfolioItem}
                         key={index}
                     />
                 ))}
