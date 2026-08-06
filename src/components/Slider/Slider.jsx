@@ -1,5 +1,6 @@
 import 'swiper/css'
-import SliderNavigation from "./components/SliderNavigation/index.js";
+import './Slider.scss'
+import SliderNavigation from './components/SliderNavigation'
 
 export default (props) => {
     const {
