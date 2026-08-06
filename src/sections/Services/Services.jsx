@@ -55,7 +55,7 @@ export default () => {
             actions={
                 <>
                     <SliderNavigation
-                        className="section__slider-navigation"
+                        className="section__slider-navigation hidden-laptop"
                         id={sliderId}
                     />
                     <Button

@@ -1,15 +1,11 @@
 import 'swiper/css'
-
-const defaultSliderConfig = {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-}
+import SliderNavigation from "./components/SliderNavigation/index.js";
 
 export default (props) => {
     const {
         children,
         navigationTargetElementId = null,
-        sliderConfig = defaultSliderConfig,
+        sliderConfig = {},
     } = props
 
     return (
@@ -32,6 +28,9 @@ export default (props) => {
                     ))}
                 </ul>
             </div>
+            <SliderNavigation
+                className="slider__navigation visible-laptop"
+            />
         </div>
     )
 }

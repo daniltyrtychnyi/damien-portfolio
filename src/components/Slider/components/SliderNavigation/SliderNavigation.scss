@@ -3,9 +3,15 @@
   align-items: center;
   column-gap: fluid-to-laptop(16, 12);
   padding: fluid-to-laptop(10, 8);
+  max-width: fluid-to-laptop(160, 124);
   background-color: var(--color-dark-03);
   border: var(--border);
   border-radius: 100px;
+
+  @include laptop {
+    margin-top: 40px;
+    margin-inline: auto;
+  }
 
   &__button {
     @include square(fluid-to-laptop(62, 48));

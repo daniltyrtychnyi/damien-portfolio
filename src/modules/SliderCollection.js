@@ -1,6 +1,7 @@
 import getConfig from '@/utils/getConfig'
 import Swiper from 'swiper'
 import { Navigation } from 'swiper/modules'
+import MatchMedia from '@/constants/MatchMedia'
 
 const rootSelector = '[data-js-slider]'
 
@@ -17,23 +18,63 @@ class Slider {
         this.rootElement = rootElement
         this.swiperElement = this.rootElement.querySelector(this.selectors.swiper)
         this.config = getConfig(this.rootElement, this.selectors.root)
-        this.navigationElement = this.config.navigationTargetElementId
-            ? document.getElementById(this.config.navigationTargetElementId)
-            : this.rootElement.querySelector(this.selectors.navigation)
-        this.previousButtonElement = this.navigationElement.querySelector(this.selectors.previousButton)
-        this.nextButtonElement = this.navigationElement.querySelector(this.selectors.nextButton)
-        this.init()
+
+        const {
+            previousButton,
+            nextButton,
+        } = this.getButtonsFromNavigation()
+
+        this.init(previousButton, nextButton)
+        this.bindEvents()
     }
 
-    init() {
-        new Swiper(this.swiperElement, {
+    init(previousButton, nextButton) {
+        this.swiper = new Swiper(this.swiperElement, {
+            ...this.config.sliderConfig,
             modules: [Navigation],
             loop: true,
             navigation: {
-                prevEl: this.previousButtonElement,
-                nextEl: this.nextButtonElement,
+                prevEl: previousButton,
+                nextEl: nextButton,
             }
         })
+    }
+
+    getButtonsFromNavigation(isLaptopDevice = MatchMedia.laptop.matches) {
+        const navigationElement = isLaptopDevice
+            ? this.rootElement.querySelector(this.selectors.navigation)
+            : document.getElementById(this.config.navigationTargetElementId)
+
+        const previousButton = navigationElement.querySelector(this.selectors.previousButton)
+        const nextButton = navigationElement.querySelector(this.selectors.nextButton)
+
+        return {
+            previousButton,
+            nextButton,
+        }
+    }
+
+    updateSwiperNavigation(previousButton, nextButton) {
+        this.swiper.navigation.destroy()
+
+        this.swiper.params.navigation.prevEl = previousButton
+        this.swiper.params.navigation.nextEl = nextButton
+
+        this.swiper.navigation.init()
+        this.swiper.navigation.update()
+    }
+
+    onLaptopMatchMediaChange = (event) => {
+        const {
+            previousButton,
+            nextButton,
+        } = this.getButtonsFromNavigation(event.matches)
+
+        this.updateSwiperNavigation(previousButton, nextButton)
+    }
+
+    bindEvents() {
+        MatchMedia.laptop.addEventListener('change', this.onLaptopMatchMediaChange)
     }
 }
 
