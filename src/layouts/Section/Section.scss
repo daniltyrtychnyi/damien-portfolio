@@ -4,6 +4,10 @@
   row-gap: fluid(80, 40);
   padding-block: var(--section-padding-y);
 
+  &--compact {
+    row-gap: 0;
+  }
+
   &__header {
     padding-bottom: fluid(50, 20);
     border-bottom: var(--border);

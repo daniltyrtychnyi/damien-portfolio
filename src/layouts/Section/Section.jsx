@@ -6,6 +6,10 @@ import Button from '@/components/Button'
 export default (props) => {
     const {
         className,
+        /**
+         * '' (default) | 'compact'
+         */
+        mode,
         titleId,
         subTitle,
         title,
@@ -16,7 +20,9 @@ export default (props) => {
 
     return (
         <section
-            className={clsx(className, 'section container')}
+            className={clsx(className, 'section container', {
+                [`section--${mode}`]: mode
+            })}
             aria-labelledby={titleId}
         >
             <header className="section__header">
