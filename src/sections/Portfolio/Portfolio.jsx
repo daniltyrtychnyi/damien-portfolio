@@ -3,9 +3,9 @@ import PortfolioCard from '@/components/PortfolioCard'
 import Slider from '@/components/Slider'
 import portfolioItems from './portfolioItems'
 
-const sliderId = 'portfolio-slider-navigation'
-
 export default () => {
+    const sliderId = 'portfolio-slider-navigation'
+
     return (
         <Section
             className="portfolio"

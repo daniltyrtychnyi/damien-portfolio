@@ -6,9 +6,9 @@ import Icon from '@/components/Icon'
 import Slider from '@/components/Slider'
 import servicesItems from './servicesItems'
 
-const sliderId = 'services-slider'
-
 export default () => {
+    const sliderId = 'services-slider'
+
     return (
         <Section
             className="services"

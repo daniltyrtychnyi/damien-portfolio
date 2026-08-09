@@ -10,6 +10,7 @@ export default (props) => {
         date,
         dateTime,
     } = props
+
     return (
         <article className="portfolio-card">
             <Image

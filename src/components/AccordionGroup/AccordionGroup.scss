@@ -1,0 +1,25 @@
+.accordion-group {
+  &--2-columns {
+    @include tablet-above {
+      column-count: 2;
+      column-gap: 0;
+      column-rule: var(--border);
+    }
+  }
+
+  &__item {
+    break-inside: avoid-column;
+    padding: fluid(30, 20) fluid(50, 24);
+    border-bottom: var(--border);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.accordion-group__item--last-item-in-column {
+      @include tablet-above {
+        border-bottom: none;
+      }
+    }
+  }
+}
