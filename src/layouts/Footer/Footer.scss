@@ -1,6 +1,16 @@
 .footer {
+  padding-top: var(--section-padding-y);
   overflow: hidden;
   color: var(--color-grey-50);
+
+  &__branding {
+    margin-bottom: fluid(100, 20);
+  }
+
+  &__logo {
+    margin-left: auto;
+    max-width: fluid(1058, 331);
+  }
 
   &__main {
     text-transform: uppercase;

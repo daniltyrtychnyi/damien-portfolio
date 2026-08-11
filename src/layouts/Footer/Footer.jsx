@@ -1,12 +1,14 @@
 import './Footer.scss'
 import Socials from '@/components/Socials'
 import Action from '@/components/Action'
+import Marquee from '@/components/Marquee'
+import logo from '@/assets/images/footer/logo.svg'
 
 export default () => {
     const menuItems = [
         {
-          title: 'Home',
-          links: ['About Me', 'My Works', 'Testimonials'],
+            title: 'Home',
+            links: ['About Me', 'My Works', 'Testimonials'],
         },
         {
             title: 'Clients',
@@ -26,6 +28,16 @@ export default () => {
 
     return (
         <footer className="footer">
+            <div className="footer__branding container">
+                <img
+                    src={logo}
+                    alt=""
+                    className="footer__logo"
+                />
+            </div>
+            <Marquee
+                className="footer__marquee"
+            />
             <div className="footer__main container">
                 <div className="footer__main-column">
                     <p className="footer__subtitle">
@@ -40,7 +52,7 @@ export default () => {
                 </div>
                 <div className="footer__main-column">
                     <nav className="footer__menu">
-                        {menuItems.map(({ title, links }, index) => (
+                        {menuItems.map(({title, links}, index) => (
                             <div className="footer__menu-column" key={index}>
                                 <a className="footer__menu-title" href="/">
                                     {title}
