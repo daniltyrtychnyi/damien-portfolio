@@ -15,6 +15,7 @@ export default (props) => {
         title,
         sliderProps = null,
         buttonProps = null,
+        extraInfo,
         children,
     } = props
 
@@ -26,13 +27,25 @@ export default (props) => {
             aria-labelledby={titleId}
         >
             <header className="section__header">
-                <div className="section__info">
-                    <p className="section__subtitle">
-                        {subTitle}
-                    </p>
-                    <h2 className="section__title" id={titleId}>
-                        {title}
-                    </h2>
+                <div className="section__main">
+                    <div className="section__info">
+                        <p className="section__subtitle">
+                            {subTitle}
+                        </p>
+                        <h2 className="section__title" id={titleId}>
+                            {title}
+                        </h2>
+                    </div>
+                    {extraInfo && (
+                        <div className="section__extra">
+                            <p className="section__label">
+                                Total Reviews
+                            </p>
+                            <span className="section__value">
+                                323
+                            </span>
+                        </div>
+                    )}
                 </div>
                 {(sliderProps || buttonProps) && (
                     <div className="section__actions">
