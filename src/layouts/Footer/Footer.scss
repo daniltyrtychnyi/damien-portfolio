@@ -18,12 +18,12 @@
     @include tablet-above {
       position: relative;
       display: grid;
-      grid-template-columns: 41% auto;
+      grid-template-columns: 45% auto;
     }
 
     &::before,
     &::after {
-      @include laptop-above {
+      @include laptop-s-above {
         @include square(fluid-to-laptop(200, 187));
 
         content: '';
@@ -80,10 +80,12 @@
 
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
-    gap: 40px 50px;
+    column-gap: 35px;
 
-    @include laptop {
+    @include laptop-s {
       --columns: 2;
+
+      row-gap: 40px;
     }
 
     &-column,
@@ -148,5 +150,9 @@
     @include tablet {
       order: 1;
     }
+  }
+
+  &__copyright {
+    justify-self: end;
   }
 }

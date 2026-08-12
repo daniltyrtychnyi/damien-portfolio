@@ -1,4 +1,3 @@
-import './Questions.scss'
 import Section from '@/layouts/Section'
 import AccordionGroup from '@/components/AccordionGroup'
 import Accordion from '@/components/Accordion'

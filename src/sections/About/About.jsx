@@ -1,8 +1,8 @@
 import './About.scss'
 import Section from '@/layouts/Section'
-import Button from '@/components/Button'
-import {Image} from 'minista/assets'
+import {Picture} from 'minista/assets'
 import Socials from '@/components/Socials'
+import Button from '@/components/Button'
 
 export default () => {
     return (
@@ -16,11 +16,13 @@ export default () => {
             }}
         >
             <div className="about__main">
-                <Image
-                    className="about__image"
-                    src="/src/assets/images/about/1.png"
-                    loading="lazy"
-                />
+                <div className="about__image">
+                    <Picture
+                        src="/src/assets/images/about/1.png"
+                        formats={['webp', 'avif', 'inherit']}
+                        loading="lazy"
+                    />
+                </div>
                 <div className="about__body">
                     <div className="about__introduction">
                         <h3 className="about__title h4">

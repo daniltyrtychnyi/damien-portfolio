@@ -14,7 +14,7 @@ export default () => {
             title="Explore My photography work."
             sliderProps={{
                 sliderId,
-                laptopHidden: true,
+                laptopSHidden: true,
             }}
             buttonProps={{
                 label: "View All Works",
@@ -41,19 +41,14 @@ export default () => {
                             slidesPerGroup: 3,
                             spaceBetween: 30,
                         },
-                        1440: {
-                            slidesPerView: 3,
-                            slidesPerGroup: 3,
-                            spaceBetween: 30,
-                        },
-                        1600: {
+                        1441: {
                             slidesPerView: 3,
                             slidesPerGroup: 3,
                             spaceBetween: 50,
-                        }
+                        },
                     }
                 }}
-                laptopVisible
+                laptopSVisible
             >
                 {portfolioItems.map((portfolioItem, index) => (
                     <PortfolioCard

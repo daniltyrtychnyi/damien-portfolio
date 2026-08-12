@@ -1,11 +1,14 @@
 .services {
   &__wrapper {
-    display: flex;
+    display: grid;
     align-items: center;
     column-gap: fluid-to-laptop(50, 40);
 
-    @include laptop {
-      flex-direction: column-reverse;
+    @include laptop-s-above {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include laptop-s {
       row-gap: 30px;
     }
   }
@@ -55,7 +58,6 @@
   }
 
   &__image {
-    max-width: fluid(773, 358);
     border-radius: 20px 20px 20px 100px;
 
     @include mobile {

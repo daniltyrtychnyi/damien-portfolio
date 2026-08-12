@@ -1,10 +1,9 @@
 import './PortfolioCard.scss'
-import {Image} from 'minista/assets'
+import {Picture} from 'minista/assets'
 import Icon from '../Icon'
 
 export default (props) => {
     const {
-        className,
         imgSrc,
         title,
         date,
@@ -13,7 +12,7 @@ export default (props) => {
 
     return (
         <article className="portfolio-card">
-            <Image
+            <Picture
                 className="portfolio-card__image"
                 src={imgSrc}
                 loading="lazy"

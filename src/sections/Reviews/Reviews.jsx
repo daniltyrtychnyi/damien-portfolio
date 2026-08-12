@@ -14,7 +14,7 @@ export default () => {
             title="What My Clients Say"
             sliderProps={{
                 sliderId,
-                laptopHidden: true,
+                laptopSHidden: true,
             }}
             buttonProps={{
                 label: 'View All Testimonials'
@@ -26,35 +26,25 @@ export default () => {
                 sliderConfig={{
                     slidesPerView: 1,
                     slidesPerGroup: 1,
-                    loop: true,
                     breakpoints: {
-                        390: {
-                            slidesPerView: 1,
-                            slidesPerGroup: 1,
-                        },
                         768: {
                             slidesPerView: 2,
                             slidesPerGroup: 2,
-                            spaceBetween: 10,
+                            spaceBetween: 20,
                         },
                         1280: {
                             slidesPerView: 3,
                             slidesPerGroup: 3,
-                            spaceBetween: 10,
-                        },
-                        1440: {
-                            slidesPerView: 3,
-                            slidesPerGroup: 3,
                             spaceBetween: 20,
                         },
-                        1920: {
+                        1441: {
                             slidesPerView: 3,
                             slidesPerGroup: 3,
                             spaceBetween: 30,
                         },
                     },
                 }}
-                laptopVisible
+                laptopSVisible
             >
                 {reviewItems.map((reviewItem, index) => (
                     <ReviewCard

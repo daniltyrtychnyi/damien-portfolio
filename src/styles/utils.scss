@@ -9,14 +9,14 @@
   @include visually-hidden;
 }
 
-.visible-laptop {
-  @include laptop-above {
+.visible-laptop-s {
+  @include laptop-s-above {
     display: none !important;
   }
 }
 
-.hidden-laptop {
-  @include laptop {
+.hidden-laptop-s {
+  @include laptop-s {
     display: none !important;
   }
 }

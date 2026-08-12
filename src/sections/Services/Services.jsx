@@ -1,7 +1,7 @@
 import './Services.scss'
 import Section from '@/layouts/Section'
 import Action from '@/components/Action'
-import {Image} from 'minista/assets'
+import {Picture} from 'minista/assets'
 import Icon from '@/components/Icon'
 import Slider from '@/components/Slider'
 import servicesItems from './servicesItems'
@@ -17,7 +17,7 @@ export default () => {
             title="My Photography Services"
             sliderProps={{
                 sliderId,
-                laptopHidden: true,
+                laptopSHidden: true,
             }}
             buttonProps={{
                 label: "View All Services",
@@ -25,7 +25,7 @@ export default () => {
         >
             <Slider
                 navigationTargetElementId={sliderId}
-                laptopVisible
+                laptopSVisible
             >
                 {servicesItems.map(({title, description, imgSrc, features}, index) => (
                     <div className="services__wrapper" key={index}>
@@ -63,7 +63,7 @@ export default () => {
                                 </ul>
                             </div>
                         </div>
-                        <Image
+                        <Picture
                             className="services__image"
                             src={imgSrc}
                             loading="lazy"

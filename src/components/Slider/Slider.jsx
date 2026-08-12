@@ -7,8 +7,8 @@ export default (props) => {
         children,
         navigationTargetElementId = null,
         sliderConfig = {},
-        laptopHidden,
-        laptopVisible,
+        laptopSHidden,
+        laptopSVisible,
     } = props
 
     return (
@@ -33,8 +33,8 @@ export default (props) => {
             </div>
             <SliderNavigation
                 className="slider__navigation"
-                laptopHidden={laptopHidden}
-                laptopVisible={laptopVisible}
+                laptopSHidden={laptopSHidden}
+                laptopSVisible={laptopSVisible}
             />
         </div>
     )

@@ -33,6 +33,9 @@ export default () => {
                     src={logo}
                     alt=""
                     className="footer__logo"
+                    width={1058}
+                    height={213}
+                    loading="lazy"
                 />
             </div>
             <Marquee

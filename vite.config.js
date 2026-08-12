@@ -1,4 +1,4 @@
-import {defineConfig, pluginSsg, pluginBundle, pluginSprite, pluginImage} from "minista"
+import {defineConfig, pluginSsg, pluginBundle, pluginSprite, pluginImage, pluginEntry} from "minista"
 import path from 'path'
 
 export default defineConfig({
@@ -11,6 +11,7 @@ export default defineConfig({
         pluginBundle(),
         pluginSprite(),
         pluginImage(),
+        pluginEntry(),
     ],
     resolve: {
         alias: [{

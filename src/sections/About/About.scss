@@ -1,17 +1,16 @@
 .about {
   &__main {
-    display: flex;
+    display: grid;
     align-items: center;
-    column-gap: fluid(30, 20);
+    column-gap: fluid-to-laptop(30, 20);
 
-    @include laptop {
-      flex-direction: column;
+    @include laptop-s-above {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include laptop-s {
       row-gap: 20px;
     }
-  }
-
-  &__image {
-    max-width: fluid(783, 358);
   }
 
   &__body {

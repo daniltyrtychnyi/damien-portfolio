@@ -2,23 +2,26 @@
   padding-bottom: var(--section-padding-y);
 
   &__main {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     align-items: center;
     column-gap: 10px;
     text-transform: uppercase;
 
-    @include laptop {
+    @include laptop-s {
       padding-block: 40px;
     }
 
-    @include tablet {
-      flex-direction: column;
-      align-items: start;
+    @include mobile-above {
+      grid-template-columns: auto 1fr auto;
+    }
+
+    @include mobile {
       row-gap: 20px;
+      align-items: start;
     }
 
     &-image {
+      justify-self: center;
       max-width: fluid-to-laptop(346, 262);
     }
   }
@@ -39,5 +42,11 @@
 
   &__title {
     color: var(--color-grey-90);
+  }
+
+  &__action {
+    @include mobile-above {
+      margin-left: auto;
+    }
   }
 }

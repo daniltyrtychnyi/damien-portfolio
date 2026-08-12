@@ -52,7 +52,7 @@ export default (props) => {
                         {sliderProps && (
                             <SliderNavigation
                                 id={sliderProps.sliderId}
-                                laptopHidden
+                                laptopSHidden
                             />
                         )}
                         {buttonProps && (

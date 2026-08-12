@@ -1,5 +1,3 @@
-import './Content.scss'
-
 export default (props) => {
     const {
         children,
