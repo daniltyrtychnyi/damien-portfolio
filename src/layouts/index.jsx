@@ -2,6 +2,7 @@ import '@/styles'
 import {Head} from 'minista/head'
 import Header from './Header'
 import Content from './Content'
+import Brand from '@/sections/Brand'
 import Footer from './Footer'
 
 export default (props) => {
@@ -24,6 +25,7 @@ export default (props) => {
             <Header url={url} />
             <Content>
                 {children}
+                <Brand />
             </Content>
             <Footer />
         </>

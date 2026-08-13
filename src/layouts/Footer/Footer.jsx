@@ -1,8 +1,6 @@
 import './Footer.scss'
 import Socials from '@/components/Socials'
 import Action from '@/components/Action'
-import Marquee from '@/components/Marquee'
-import logo from '@/assets/images/footer/logo.svg'
 
 export default () => {
     const menuItems = [
@@ -28,19 +26,6 @@ export default () => {
 
     return (
         <footer className="footer">
-            <div className="footer__branding container">
-                <img
-                    src={logo}
-                    alt=""
-                    className="footer__logo"
-                    width={1058}
-                    height={213}
-                    loading="lazy"
-                />
-            </div>
-            <Marquee
-                className="footer__marquee"
-            />
             <div className="footer__main container">
                 <div className="footer__main-column">
                     <p className="footer__subtitle">
@@ -91,7 +76,9 @@ export default () => {
                         className="footer__soc1als"
                     />
                     <p className="footer__copyright">
-                        &copy; <time dateTime="2024">2024</time> Damien Braun Photography. All rights reserved.
+                        &copy;
+                        <time dateTime="2024">2024</time>
+                        Damien Braun Photography. All rights reserved.
                     </p>
                 </div>
             </div>

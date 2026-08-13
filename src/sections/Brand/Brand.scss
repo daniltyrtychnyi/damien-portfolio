@@ -1,0 +1,10 @@
+.brand {
+  display: grid;
+  row-gap: fluid(100, 20);
+  padding-top: var(--section-padding-y);
+
+  &__image {
+    margin-left: auto;
+    max-width: fluid(1058, 331)
+  }
+}
