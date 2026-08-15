@@ -2,14 +2,13 @@
   padding-block: var(--section-padding-y);
 
   &__main {
-
     @include laptop-above {
       position: relative;
 
       &::before {
         @include square(fluid-to-laptop(137, 100));
 
-        content: '';
+        content: var(--pageHeroMainContent);
         position: absolute;
         left: 20px;
         bottom: 18px;
@@ -93,6 +92,10 @@
     &-value {
       color: var(--color-white);
     }
+  }
+
+  &__description {
+    max-width: fluid-to-laptop(1096, 880);
   }
 
   &__scroll {

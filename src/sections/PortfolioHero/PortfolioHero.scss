@@ -1,0 +1,41 @@
+.portfolio-hero {
+  &__partners {
+    display: grid;
+    row-gap: fluid-to-laptop(18, 14);
+    text-align: center;
+    padding-top: fluid(80, 40);
+
+    &-title {
+      font-weight: 500;
+      font-size: fluid-to-laptop(16, 14);
+      text-transform: uppercase;
+      color: var(--color-grey-50);
+    }
+
+    &-wrapper {
+      padding-block: fluid(30, 14);
+      background-color: var(--color-dark-06);
+      border-block: var(--border);
+      overflow: hidden;
+    }
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 20px;
+
+      @include mobile-s {
+        translate: -64%;
+      }
+    }
+
+    &-item {
+      flex-shrink: 0;
+    }
+
+    &-logo {
+      max-width: fluid(250, 150);
+    }
+  }
+}
