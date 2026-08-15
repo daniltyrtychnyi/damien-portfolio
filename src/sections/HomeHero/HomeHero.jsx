@@ -1,11 +1,11 @@
-import './Hero.scss'
-import decorImage from '@/assets/images/hero/decor.svg'
+import './HomeHero.scss'
+import decorImage from '@/assets/images/home-hero/decor.svg'
 import Action from '@/components/Action'
 import Marquee from '@/components/Marquee'
 import {Picture} from 'minista/assets'
 
 export default () => {
-    const titleId = "hero-title"
+    const titleId = "home-hero-title"
 
     return (
         <section className="hero" aria-labelledby={titleId}>

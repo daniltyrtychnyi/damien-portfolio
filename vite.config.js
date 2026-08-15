@@ -26,6 +26,7 @@ export default defineConfig({
           @use '@/styles/helpers' as *;
         `
             }
-        }
+        },
+        devSourcemap: true,
     }
 })

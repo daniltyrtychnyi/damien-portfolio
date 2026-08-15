@@ -1,0 +1,19 @@
+.about-hero {
+  &__biography {
+    display: grid;
+    row-gap: fluid(40, 20);
+    margin-top: fluid(100, 60);
+    padding-block: fluid(80, 40);
+    color: var(--color-grey-50);
+    border-block: var(--border);
+
+    &-title {
+      color: inherit;
+      text-transform: uppercase;
+    }
+
+    &-description {
+      @include fluid-text(20, 14);
+    }
+  }
+}

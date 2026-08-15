@@ -1,4 +1,4 @@
-import Hero from '@/sections/Hero'
+import HomeHero from '@/sections/HomeHero'
 import About from '@/sections/About'
 import Services from '@/sections/Services'
 import Portfolio from '@/sections/Portfolio'
@@ -12,7 +12,7 @@ export const metadata = {
 export default function () {
   return (
     <>
-        <Hero />
+        <HomeHero />
         <About />
         <Services />
         <Portfolio />

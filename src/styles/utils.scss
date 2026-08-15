@@ -9,6 +9,13 @@
   @include visually-hidden;
 }
 
+.hidden-laptop {
+  @include laptop {
+    display: none !important;
+  }
+}
+
+
 .visible-laptop-s {
   @include laptop-s-above {
     display: none !important;
