@@ -83,7 +83,7 @@
       white-space: nowrap;
       background-color: var(--color-dark-06);
       border: var(--border);
-      border-radius: 12px;
+      border-radius: var(--border-radius-l);
 
       @include laptop {
         align-items: center;

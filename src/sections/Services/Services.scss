@@ -46,7 +46,15 @@
     column-gap: fluid(10, 4);
     padding: fluid(20, 14);
     border: var(--border);
-    border-radius: fluid(12, 8);
+    border-radius: var(--border-radius-l);
+
+    @include laptop {
+      border-radius: var(--border-radius-m);
+    }
+
+    @include mobile {
+      border-radius: var(--border-radius-s);
+    }
   }
 
   &__icon {
@@ -58,7 +66,7 @@
   }
 
   &__image {
-    border-radius: 20px 20px 20px 100px;
+    border-radius: 20px 20px 100px;
 
     @include mobile {
       border-radius: 12px 12px 30px 30px;

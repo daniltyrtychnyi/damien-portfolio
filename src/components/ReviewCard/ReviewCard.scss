@@ -8,8 +8,12 @@
   height: 100%;
   background-color: var(--color-dark-06);
   border: var(--border);
-  border-radius: 12px;
+  border-radius: var(--border-radius-l);
   overflow: hidden;
+
+  @include laptop {
+    border-radius: var(--border-radius-m);
+  }
 
   &::before,
   &::after {

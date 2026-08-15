@@ -1,5 +1,5 @@
 import './PageHero.scss'
-import { Picture } from 'minista/assets'
+import {Picture} from 'minista/assets'
 
 export default (props) => {
     const {
@@ -41,7 +41,7 @@ export default (props) => {
                     {metrics?.length > 0 && (
                         <div className="page-hero__metrics">
                             <dl className="page-hero__metrics-list">
-                                {metrics.map(({ label, value, unit }, index) => (
+                                {metrics.map(({label, value, unit}, index) => (
                                     <div className="page-hero__metrics-item" key={index}>
                                         <dt className="page-hero__metrics-key">
                                             {label}

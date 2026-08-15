@@ -1,0 +1,11 @@
+.journey {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid-to-laptop(30, 20);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}
