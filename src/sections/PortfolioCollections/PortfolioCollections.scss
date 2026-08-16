@@ -1,0 +1,24 @@
+.portfolio-collections {
+  padding-top: fluid(50, 40);
+  padding-bottom: var(--section-padding-y);
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(50, 20);
+    padding-block: fluid(80, 40);
+    border-top: var(--border);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+  }
+
+  &__title {
+    color: var(--color-grey-50);
+    text-transform: uppercase;
+  }
+}

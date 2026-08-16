@@ -10,6 +10,7 @@
     display: flex;
     align-items: start;
     justify-content: space-between;
+    column-gap: 10px;
   }
 
   &__info {
@@ -34,6 +35,7 @@
     padding-bottom: fluid-to-laptop(6, 4);
     font-weight: 500;
     text-transform: uppercase;
+    white-space: nowrap;
     color: var(--color-grey-95);
     border-bottom: var(--border-dark-20);
 

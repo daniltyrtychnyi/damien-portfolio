@@ -43,7 +43,7 @@ export default () => {
             laptopImageSrc="/src/assets/images/page-hero/about/bg_laptop.jpg"
             scrollTarget="My Journey"
         >
-            <div className="about-hero__biography">
+            <div className="about-hero__biography container">
                 <h2 className="about-hero__biography-title h3">
                     My Biography
                 </h2>
