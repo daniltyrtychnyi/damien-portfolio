@@ -1,0 +1,21 @@
+.underline-link {
+  padding-block: 6px;
+  font-weight: 500;
+  border-bottom: var(--border-dark-20);
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include hover {
+    border-color: var(--color-purple-60);
+  }
+
+  &:not(:only-child) {
+    display: flex;
+    align-items: center;
+    column-gap: fluid-to-laptop(10, 4);
+
+    svg {
+      @include square(fluid-to-laptop(24, 20));
+    }
+  }
+}
