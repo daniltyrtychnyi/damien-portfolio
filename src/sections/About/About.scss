@@ -52,6 +52,11 @@
       font-weight: 500;
       color: var(--color-grey-90);
     }
+
+    &-link {
+      color: var(--color-grey-70);
+      text-decoration: underline;
+    }
   }
 
   &__title {

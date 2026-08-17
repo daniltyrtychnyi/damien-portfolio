@@ -30,12 +30,16 @@
   &__header {
     display: grid;
     row-gap: fluid-to-laptop(31, 24);
-    color: var(--color-grey-50);
+    order: -1;
 
     @include laptop-above {
       position: absolute;
       top: 0;
       left: 0;
+    }
+
+    @include mobile-s {
+      order: 0;
     }
   }
 
@@ -95,7 +99,9 @@
   }
 
   &__description {
-    max-width: fluid-to-laptop(1096, 880);
+    @include laptop-above {
+      max-width: fluid-to-laptop(1096, 880);
+    }
   }
 
   &__scroll {
@@ -103,7 +109,6 @@
     right: fluid-to-laptop(50, 20);
     bottom: fluid-to-laptop(61, 49);
     font-weight: 500;
-    color: var(--color-grey-50);
     text-transform: uppercase;
   }
 }

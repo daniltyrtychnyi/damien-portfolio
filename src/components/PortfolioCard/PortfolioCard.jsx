@@ -1,6 +1,6 @@
 import './PortfolioCard.scss'
 import {Picture} from 'minista/assets'
-import Icon from '../Icon'
+import UnderlineLink from '../UnderlineLink'
 
 export default (props) => {
     const {
@@ -29,14 +29,11 @@ export default (props) => {
                         {date}
                     </time>
                 </div>
-                <a href="/" className="portfolio-card__link">
-                    View Project
-                    <Icon
-                        className="portfolio-card__icon"
-                        name="arrow-top-right"
-                        hasFill
-                    />
-                </a>
+                <UnderlineLink
+                    className="portfolio-card__link"
+                    label="View Project"
+                    hasArrow
+                />
             </div>
         </article>
     )

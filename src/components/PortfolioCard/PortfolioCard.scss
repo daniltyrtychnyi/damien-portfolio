@@ -1,6 +1,7 @@
 .portfolio-card {
   display: inline-grid;
   row-gap: 20px;
+  height: 100%;
 
   &__image {
     border-radius: fluid-to-laptop(20, 16);
@@ -22,30 +23,5 @@
 
   &__title {
     color: var(--color-grey-80);
-  }
-
-  &__date {
-    color: var(--color-grey-50);
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    column-gap: fluid-to-laptop(10, 6);
-    padding-bottom: fluid-to-laptop(6, 4);
-    font-weight: 500;
-    text-transform: uppercase;
-    white-space: nowrap;
-    color: var(--color-grey-95);
-    border-bottom: var(--border-dark-20);
-
-    @include hover {
-      color: inherit;
-      opacity: 0.7;
-    }
-
-    .portfolio-card__icon {
-      --iconSize: #{fluid-to-laptop(24, 20)};
-    }
   }
 }

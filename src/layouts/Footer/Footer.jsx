@@ -1,6 +1,7 @@
 import './Footer.scss'
 import Socials from '@/components/Socials'
 import Action from '@/components/Action'
+import UnderlineLink from '@/components/UnderlineLink'
 
 export default () => {
     const menuItems = [
@@ -49,9 +50,10 @@ export default () => {
                                     <ul className="footer__menu-list">
                                         {links.map((link, index) => (
                                             <li className="footer__menu-item" key={index}>
-                                                <a className="footer__menu-link" href="/">
-                                                    {link}
-                                                </a>
+                                                <UnderlineLink
+                                                    className="footer__menu-link"
+                                                    label={link}
+                                                />
                                             </li>
                                         ))}
                                     </ul>
@@ -76,9 +78,7 @@ export default () => {
                         className="footer__soc1als"
                     />
                     <p className="footer__copyright">
-                        &copy;
-                        <time dateTime="2024">2024</time>
-                        Damien Braun Photography. All rights reserved.
+                        &copy; <time dateTime="2024">2024</time> Damien Braun Photography. All rights reserved.
                     </p>
                 </div>
             </div>

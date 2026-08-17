@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family-base);
-  color: var(--color-grey-70);
+  color: var(--color-grey-50);
   background-color: var(--color-dark-03);
 }
 
@@ -59,14 +59,11 @@ h6, .h6 {
 }
 
 a {
-  color: inherit;
+  color: var(--color-grey-95);
+  text-decoration: none;
 
   @include hover {
     color: var(--color-purple-60);
-  }
-
-  &[class] {
-    text-decoration: none;
   }
 }
 

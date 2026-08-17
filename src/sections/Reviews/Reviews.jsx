@@ -14,7 +14,7 @@ export default () => {
             title="What My Clients Say"
             sliderProps={{
                 sliderId,
-                laptopSHidden: true,
+                isLaptopSHidden: true,
             }}
             buttonProps={{
                 label: 'View All Testimonials'
@@ -44,7 +44,7 @@ export default () => {
                         },
                     },
                 }}
-                laptopSVisible
+                isLaptopSVisible
             >
                 {reviewItems.map((reviewItem, index) => (
                     <ReviewCard

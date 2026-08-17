@@ -5,15 +5,15 @@ import Button from '@/components/Button'
 export default (props) => {
     const {
         id,
-        laptopSHidden = false,
-        laptopSVisible = false,
+        isLaptopSHidden = false,
+        isLaptopSVisible = false,
     } = props
 
     return (
         <div
             className={clsx("slider-navigation", {
-                'hidden-laptop-s': laptopSHidden,
-                'visible-laptop-s': laptopSVisible,
+                'hidden-laptop-s': isLaptopSHidden,
+                'visible-laptop-s': isLaptopSVisible,
             })}
             id={id}
             data-js-slider-navigation=""

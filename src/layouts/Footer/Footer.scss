@@ -1,10 +1,7 @@
 .footer {
   overflow: hidden;
-  color: var(--color-grey-50);
 
   &__main {
-    text-transform: uppercase;
-
     @include tablet-above {
       position: relative;
       display: grid;
@@ -63,6 +60,7 @@
   &__subtitle,
   &__menu-title {
     font-weight: 600;
+    text-transform: uppercase;
   }
 
   &__menu {
@@ -89,19 +87,12 @@
       row-gap: fluid(20, 14);
     }
 
-    &-list {
-      row-gap: fluid-to-laptop(6, 4);
+    &-title {
+      color: var(--color-grey-50);
     }
 
-    &-link {
-      padding-bottom: 6px;
-      font-weight: 500;
-      color: var(--color-grey-95);
-      border-bottom: var(--border-dark-20);
-
-      @include hover {
-        border-color: var(--color-purple-60);
-      }
+    &-list {
+      row-gap: fluid-to-laptop(6, 4);
     }
   }
 
@@ -134,15 +125,15 @@
         }
       }
     }
+
+    &-link {
+      color: var(--color-grey-50);
+    }
   }
 
   &__soc1als {
     @include tablet {
       order: 1;
     }
-  }
-
-  &__copyright {
-    justify-self: end;
   }
 }

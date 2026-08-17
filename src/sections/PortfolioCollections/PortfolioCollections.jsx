@@ -25,13 +25,13 @@ export default () => {
                             </h2>
                             <SliderNavigation
                                 id={navigationTargetElementId}
-                                laptopSHidden
+                                isLaptopSHidden
                             />
                         </header>
                         <div className="portfolio-collections__body">
                             <Slider
                                 navigationTargetElementId={navigationTargetElementId}
-                                laptopSVisible
+                                isLaptopSVisible
                                 sliderConfig={{
                                     slidesPerView: 1,
                                     slidesPerGroup: 1,
@@ -39,18 +39,18 @@ export default () => {
                                         768: {
                                             slidesPerView: 2,
                                             slidesPerGroup: 2,
-                                            spaceBetween: 15,
+                                            spaceBetween: 10,
                                         },
                                         1024: {
                                             slidesPerView: 3,
                                             slidesPerGroup: 3,
-                                            spaceBetween: 15,
+                                            spaceBetween: 20,
                                             allowTouchMove: false,
                                         },
                                         1280: {
                                             slidesPerView: 3,
                                             slidesPerGroup: 3,
-                                            spaceBetween: 30,
+                                            spaceBetween: 40,
                                             allowTouchMove: false,
                                         },
                                         1441: {

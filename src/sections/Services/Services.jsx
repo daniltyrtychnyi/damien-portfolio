@@ -17,7 +17,7 @@ export default () => {
             title="My Photography Services"
             sliderProps={{
                 sliderId,
-                laptopSHidden: true,
+                isLaptopSHidden: true,
             }}
             buttonProps={{
                 label: "View All Services",
@@ -25,7 +25,7 @@ export default () => {
         >
             <Slider
                 navigationTargetElementId={sliderId}
-                laptopSVisible
+                isLaptopSVisible
             >
                 {servicesItems.map(({title, description, imgSrc, features}, index) => (
                     <div className="services__wrapper" key={index}>
