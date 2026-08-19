@@ -30,6 +30,7 @@ export default () => {
             titleId="portfolio-title"
             subTitle="Portfolio"
             title="Visual Poetry in Pixels"
+            mode="portfolio"
             description="Step into a visual journey that encapsulates the essence of my lens. Each photograph in this portfolio is a narrative, a frozen moment in time, and a testament to the artistry and passion poured into every frame. Explore the diverse tapestry of stories I've had the privilege to capture and witness the world through my lens."
             desktopImageSrc="/src/assets/images/page-hero/portfolio/bg.png"
             laptopImageSrc="/src/assets/images/page-hero/portfolio/bg_laptop.jpg"

@@ -1,6 +1,30 @@
 .page-hero {
   padding-block: var(--section-padding-y);
 
+  &--portfolio {
+    .page-hero__header {
+      @include laptop-above {
+        top: fluid-to-laptop(49, 30);
+      }
+    }
+
+    .page-hero__description {
+      @include laptop-above {
+        max-width: fluid-to-laptop(1096, 880);
+      }
+    }
+  }
+
+  &--services {
+    .page-hero__header {
+      @include laptop-above {
+        position: absolute;
+        top: 20px;
+        left: 19%;
+      }
+    }
+  }
+
   &__main {
     @include laptop-above {
       position: relative;
@@ -95,12 +119,6 @@
 
     &-value {
       color: var(--color-white);
-    }
-  }
-
-  &__description {
-    @include laptop-above {
-      max-width: fluid-to-laptop(1096, 880);
     }
   }
 

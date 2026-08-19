@@ -1,5 +1,6 @@
 import './PageHero.scss'
 import {Picture} from 'minista/assets'
+import clsx from 'clsx'
 
 export default (props) => {
     const {
@@ -8,6 +9,10 @@ export default (props) => {
         title,
         metrics = [],
         description,
+        /**
+         * '' (default) | 'portfolio' | 'services'
+         */
+        mode = '',
         desktopImageSrc,
         laptopImageSrc,
         scrollTarget = '',
@@ -17,7 +22,9 @@ export default (props) => {
 
     return (
         <section
-            className="page-hero"
+            className={clsx("page-hero", {
+                [`page-hero--${mode}`]: mode,
+            })}
             aria-labelledby={titleId}
         >
             <div className="page-hero__inner container">
