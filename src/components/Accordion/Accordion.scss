@@ -24,9 +24,10 @@
     list-style: none;
     user-select: none;
     cursor: pointer;
+    transition-duration: var(--transition-duration);
 
     @include hover {
-      color: var(--color-white);
+      color: var(--color-purple-60);
     }
 
     &::-webkit-details-marker {

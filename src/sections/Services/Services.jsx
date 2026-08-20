@@ -2,7 +2,7 @@ import './Services.scss'
 import Section from '@/layouts/Section'
 import Action from '@/components/Action'
 import {Picture} from 'minista/assets'
-import Icon from '@/components/Icon'
+import FeatureGroup from '@/components/FeatureGroup'
 import Slider from '@/components/Slider'
 import servicesItems from './servicesItems'
 
@@ -47,20 +47,7 @@ export default () => {
                                 <p className="services__label">
                                     Service Highlights
                                 </p>
-                                <ul className="services__list">
-                                    {features.map((feature, index) => (
-                                        <li className="services__item" key={index}>
-                                            <Icon
-                                                className="services__icon"
-                                                name="star-dark-30"
-                                                hasFill
-                                            />
-                                            <p className="services__features">
-                                                {feature}
-                                            </p>
-                                        </li>
-                                    ))}
-                                </ul>
+                                <FeatureGroup items={features}/>
                             </div>
                         </div>
                         <Picture

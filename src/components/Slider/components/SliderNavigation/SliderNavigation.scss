@@ -13,6 +13,11 @@
     margin-inline: auto;
   }
 
+  &--offset {
+    margin-top: calc(#{fluid(40, 15)} * -1);
+    margin-inline: auto;
+  }
+
   &__button {
     @include square(fluid-to-laptop(62, 48));
 

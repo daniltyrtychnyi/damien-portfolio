@@ -1,0 +1,6 @@
+.feature-group {
+  &__list {
+    display: grid;
+    row-gap: fluid-to-laptop(10, 8);
+  }
+}

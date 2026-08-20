@@ -7,6 +7,10 @@ export default (props) => {
         children,
         navigationTargetElementId = null,
         sliderConfig = {},
+        /**
+         * '' (default) | 'offset'
+         */
+        navigationMode = '',
         isLaptopSHidden = false,
         isLaptopSVisible = false,
     } = props
@@ -33,6 +37,7 @@ export default (props) => {
             </div>
             <SliderNavigation
                 className="slider__navigation"
+                mode={navigationMode}
                 isLaptopSHidden={isLaptopSHidden}
                 isLaptopSVisible={isLaptopSVisible}
             />

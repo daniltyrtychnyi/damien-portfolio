@@ -41,7 +41,10 @@ class Slider {
     }
 
     getButtonsFromNavigation(isLaptopDevice = MatchMedia.laptop.matches) {
-        const navigationElement = isLaptopDevice
+        const isNavigationOutside = Boolean(this.config.navigationTargetElementId)
+        const isNavigationInternal = !isNavigationOutside || isLaptopDevice
+
+        const navigationElement = isNavigationInternal
             ? this.rootElement.querySelector(this.selectors.navigation)
             : document.getElementById(this.config.navigationTargetElementId)
 

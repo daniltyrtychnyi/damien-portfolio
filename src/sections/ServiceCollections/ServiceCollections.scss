@@ -1,0 +1,78 @@
+.service-collections {
+  padding-top: fluid(50, 10);
+  padding-bottom: var(--section-padding-y);
+
+  &__header {
+    display: grid;
+    align-items: center;
+    gap: 30px fluid-to-laptop(50, 40);
+    padding-block: fluid(80, 30);
+    border-top: var(--border);
+
+    @include laptop-s-above {
+      grid-template-columns: 40.5% auto;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: fluid(50, 24);
+  }
+
+  &__title {
+    color: inherit;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    pointer-events: none;
+  }
+
+  &__service {
+    display: grid;
+    align-items: center;
+    gap: 30px fluid-to-laptop(100, 80);
+    padding-block: fluid(80, 40);
+    border-top: var(--border);
+
+    @include tablet-above {
+      grid-template-columns: 24% auto;
+    }
+
+    &-offer {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &-title,
+    &-price {
+      color: var(--color-grey-80);
+    }
+
+    &-pricing {
+      display: flex;
+      align-items: center;
+      column-gap: fluid-to-laptop(20, 14);
+
+      @include tablet {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    &-price {
+      @include fluid-text(80, 34);
+
+      font-weight: 500;
+
+      &--medium {
+        @include fluid-text(55, 34);
+
+        line-height: 1.2;
+      }
+    }
+  }
+}

@@ -5,6 +5,10 @@ import Button from '@/components/Button'
 export default (props) => {
     const {
         id,
+        /**
+         * '' (default) | 'offset'
+         */
+        mode = '',
         isLaptopSHidden = false,
         isLaptopSVisible = false,
     } = props
@@ -14,6 +18,7 @@ export default (props) => {
             className={clsx("slider-navigation", {
                 'hidden-laptop-s': isLaptopSHidden,
                 'visible-laptop-s': isLaptopSVisible,
+                [`slider-navigation--${mode}`]: mode,
             })}
             id={id}
             data-js-slider-navigation=""
