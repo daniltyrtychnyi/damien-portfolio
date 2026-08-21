@@ -1,0 +1,62 @@
+.contact {
+  padding-top: fluid(50, 10);
+  padding-bottom: var(--section-padding-y);
+
+  &__panel {
+    display: grid;
+    gap: 40px fluid-to-laptop(80, 60);
+    padding-block: fluid(80, 40);
+    border-top: var(--border);
+
+    @include tablet-above {
+      grid-template-columns: 33.5% 1fr;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: fluid(30, 14);
+  }
+
+  &__title {
+    color: inherit;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: fluid-to-laptop(50, 40);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 20px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: fluid(50, 30);
+
+    &-body {
+      display: grid;
+      gap: fluid(50, 30) fluid-to-laptop(50, 40);
+      width: 100%;
+
+      @include mobile-s-above {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &-cell {
+      &--wide {
+        grid-column: -1 / 1;
+      }
+    }
+  }
+}

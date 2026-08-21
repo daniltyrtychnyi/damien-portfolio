@@ -11,7 +11,7 @@ export default (props) => {
         title,
         subTitle,
         /**
-         * '' (default) | 'grey-50'
+         * '' (default) | 'grey-50' | 'underline'
          */
         mode = '',
     } = props

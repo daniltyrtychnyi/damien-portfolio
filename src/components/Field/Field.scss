@@ -1,0 +1,46 @@
+.field {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: fluid-to-laptop(10, 6);
+
+  &__label {
+    color: var(--color-grey-90);
+  }
+
+  &__required-star {
+    color: var(--color-purple-55);
+  }
+
+  &__control {
+    width: 100%;
+    height: fluid-to-laptop(58, 45);
+    color: var(--color-white);
+    background-color: transparent;
+    border: none;
+    border-bottom: var(--border);
+
+    &::placeholder {
+      font-size: fluid-to-laptop(22, 18);
+      color: var(--color-grey-40);
+      text-transform: uppercase;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-purple-60);
+    }
+
+    @include hover {
+      border-color: var(--color-purple-60);
+    }
+
+    &:user-invalid {
+      border-color: red;
+    }
+  }
+
+  textarea.field__control {
+    resize: vertical;
+  }
+}

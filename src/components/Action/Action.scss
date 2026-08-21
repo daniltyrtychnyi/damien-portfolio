@@ -1,4 +1,8 @@
 .action {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
   &:has(.action__bottom) {
     display: flex;
     flex-direction: column;
@@ -53,5 +57,10 @@
         column-gap: fluid(16, 4);
       }
     }
+  }
+
+  &--underline {
+    padding-bottom: fluid-to-laptop(10, 6);
+    border-bottom: var(--border);
   }
 }

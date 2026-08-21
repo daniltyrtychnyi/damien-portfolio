@@ -9,13 +9,17 @@
     border-color: var(--color-purple-60);
   }
 
-  &:not(:only-child) {
+  &:has(.underline-link__icon) {
     display: flex;
     align-items: center;
     column-gap: fluid-to-laptop(10, 4);
 
-    svg {
+    .underline-link__icon {
       @include square(fluid-to-laptop(24, 20));
     }
+  }
+
+  &--lower {
+    text-transform: lowercase;
   }
 }
