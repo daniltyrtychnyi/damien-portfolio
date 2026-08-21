@@ -5,6 +5,10 @@ import Button from '../Button'
 export default (props) => {
     const {
         className,
+        /**
+         * 'circle' | 'circle-large'
+         */
+        buttonMode,
     } = props
 
     const socialsLinks = [
@@ -31,7 +35,7 @@ export default (props) => {
                             className="soc1als__link"
                             href="/"
                             target="_blank"
-                            mode="circle"
+                            mode={buttonMode}
                             label={label}
                             isLabelVisible
                             iconName={iconName}

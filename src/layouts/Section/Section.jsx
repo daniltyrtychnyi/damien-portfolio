@@ -15,7 +15,7 @@ export default (props) => {
         title,
         sliderProps = null,
         buttonProps = null,
-        extraInfo,
+        extraInfo = null,
         children,
     } = props
 
@@ -39,10 +39,10 @@ export default (props) => {
                     {extraInfo && (
                         <div className="section__extra">
                             <p className="section__label">
-                                Total Reviews
+                                {extraInfo.label}
                             </p>
                             <span className="section__value">
-                                323
+                                {extraInfo.value}
                             </span>
                         </div>
                     )}

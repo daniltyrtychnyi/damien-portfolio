@@ -19,7 +19,10 @@ export default () => {
             buttonProps={{
                 label: 'View All Testimonials'
             }}
-            extraInfo
+            extraInfo={{
+                label: 'Total Reviews',
+                value: '323',
+            }}
         >
             <Slider
                 navigationTargetElementId={sliderId}

@@ -40,8 +40,16 @@
             linear-gradient(var(--color-black) 0 0);
   }
 
+  &--circle,
+  &--circle-large {
+    border-radius: 50%;
+  }
+
   &--circle {
     padding: fluid-to-laptop(14, 10);
-    border-radius: 50%;
+  }
+
+  &--circle-large {
+    padding: fluid(24, 16);
   }
 }

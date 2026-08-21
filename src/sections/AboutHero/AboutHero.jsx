@@ -41,7 +41,7 @@ export default () => {
             ]}
             desktopImageSrc="/src/assets/images/page-hero/about/bg.png"
             laptopImageSrc="/src/assets/images/page-hero/about/bg_laptop.jpg"
-            scrollTarget="My Journey"
+            scrollTarget="Scroll Down To See My Journey"
             hasDecor
         >
             <div className="about-hero__biography container">

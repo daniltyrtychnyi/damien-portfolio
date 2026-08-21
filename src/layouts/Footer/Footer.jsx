@@ -76,6 +76,7 @@ export default () => {
                     </ul>
                     <Socials
                         className="footer__soc1als"
+                        buttonMode="circle"
                     />
                     <p className="footer__copyright">
                         &copy; <time dateTime="2024">2024</time> Damien Braun Photography. All rights reserved.

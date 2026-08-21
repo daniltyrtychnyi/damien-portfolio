@@ -35,7 +35,7 @@ export default () => {
             desktopImageSrc="/src/assets/images/page-hero/portfolio/bg.png"
             laptopImageSrc="/src/assets/images/page-hero/portfolio/bg_laptop.jpg"
             hasDecor
-            scrollTarget="The works"
+            scrollTarget="Scroll Down To See The Works"
         >
             <div className="portfolio-hero__partners">
                 <h2 className="portfolio-hero__partners-title">

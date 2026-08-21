@@ -10,7 +10,7 @@ export default (props) => {
         href,
         target,
         /**
-         * '' (default) | 'circle'
+         * '' (default) | 'circle' | 'circle-large'
          */
         mode = '',
         label,

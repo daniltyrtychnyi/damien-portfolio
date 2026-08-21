@@ -22,6 +22,7 @@ export default (props) => {
                 </div>
                 <Socials
                     className="review-card__soc1als"
+                    buttonMode="circle"
                 />
             </header>
             <div

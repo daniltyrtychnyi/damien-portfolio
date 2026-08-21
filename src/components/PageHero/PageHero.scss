@@ -2,25 +2,59 @@
   padding-block: var(--section-padding-y);
 
   &--portfolio {
-    .page-hero__header {
-      @include laptop-above {
-        top: fluid-to-laptop(49, 30);
+    .page-hero {
+      &__header-main {
+        @include laptop-above {
+          top: fluid-to-laptop(49, 30);
+        }
       }
-    }
 
-    .page-hero__description {
-      @include laptop-above {
-        max-width: fluid-to-laptop(1096, 880);
+      &__description {
+        @include laptop-above {
+          max-width: fluid-to-laptop(1096, 880);
+        }
       }
     }
   }
 
   &--services {
-    .page-hero__header {
+    .page-hero__header-main {
       @include laptop-above {
         position: absolute;
         top: 20px;
         left: 19%;
+      }
+    }
+  }
+
+  &--contact {
+    .page-hero {
+      &__header-main {
+        top: 29%;
+      }
+
+      &__description {
+        @include laptop-above {
+          max-width: fluid-to-laptop(1096, 780);
+        }
+      }
+
+      &__soc1als {
+        @include laptop-above {
+          position: absolute;
+          top: 12.5%;
+          right: 0;
+        }
+
+        @include laptop {
+          margin-inline: auto;
+          margin-top: calc(#{fluid(70, 55)} * -1);
+        }
+      }
+
+      &__scroll {
+        right: fluid-to-laptop(45, 21);
+        bottom: 31px;
       }
     }
   }
@@ -51,16 +85,20 @@
     border-radius: 20px;
   }
 
-  &__header {
+  &__header-main {
     display: grid;
     row-gap: fluid-to-laptop(31, 24);
-    order: -1;
+
 
     @include laptop-above {
       position: absolute;
       top: 0;
       left: 0;
     }
+  }
+
+  &__header {
+    order: -1;
 
     @include mobile-s {
       order: 0;
@@ -128,5 +166,6 @@
     bottom: fluid-to-laptop(61, 49);
     font-weight: 500;
     text-transform: uppercase;
+    max-width: 205px;
   }
 }

@@ -10,7 +10,7 @@ export default () => {
             mode="services"
             desktopImageSrc="/src/assets/images/page-hero/services/bg.png"
             laptopImageSrc="/src/assets/images/page-hero/services/bg_laptop.jpg"
-            scrollTarget="All Services"
+            scrollTarget="Scroll Down To See All Services"
             hasDecor
         />
     )
