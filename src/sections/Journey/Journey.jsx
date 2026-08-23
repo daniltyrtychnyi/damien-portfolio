@@ -39,8 +39,8 @@ export default () => {
         >
             <ul className="journey__list">
                 {journeyItems.map((journeyItem, index) => (
-                    <li className="journey__item">
-                        <TimeCard {...journeyItem} key={index}/>
+                    <li className="journey__item" key={index}>
+                        <TimeCard {...journeyItem} />
                     </li>
                 ))}
             </ul>

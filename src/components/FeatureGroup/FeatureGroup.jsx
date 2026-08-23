@@ -10,10 +10,9 @@ export default (props) => {
         <div className="feature-group">
             <ul className="feature-group__list">
                 {items.map((label, index) => (
-                    <li className="feature-group__item">
+                    <li className="feature-group__item" key={index}>
                         <Feature
                             label={label}
-                            key={index}
                         />
                     </li>
                 ))}
