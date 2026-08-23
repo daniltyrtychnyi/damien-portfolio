@@ -1,6 +1,6 @@
-import getConfig from '@/utils/getConfig'
 import Swiper from 'swiper'
-import { Navigation } from 'swiper/modules'
+import {Navigation, Keyboard, A11y} from 'swiper/modules'
+import getConfig from '@/utils/getConfig'
 import MatchMedia from '@/constants/MatchMedia'
 
 const rootSelector = '[data-js-slider]'
@@ -25,18 +25,29 @@ class Slider {
         } = this.getButtonsFromNavigation()
 
         this.init(previousButton, nextButton)
-        this.bindEvents()
+
+        if (this.config.navigationTargetElementId) {
+            this.bindEvents()
+        }
     }
 
     init(previousButton, nextButton) {
         this.swiper = new Swiper(this.swiperElement, {
             ...this.config.sliderConfig,
-            modules: [Navigation],
+            modules: [Navigation, Keyboard, A11y],
             loop: true,
             navigation: {
                 prevEl: previousButton,
                 nextEl: nextButton,
-            }
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
+            a11y: {
+                prevSlideMessage: 'Previous Slide',
+                nextSlideMessage: 'Next Slide',
+            },
         })
     }
 

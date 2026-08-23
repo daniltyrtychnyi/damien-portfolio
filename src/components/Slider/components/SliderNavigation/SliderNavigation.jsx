@@ -25,7 +25,6 @@ export default (props) => {
         >
             <Button
                 className="slider-navigation__button slider-navigation__button--previous"
-                label="Previous slide"
                 isLabelVisible
                 iconName="arrow-left"
                 extraAttrs={{
@@ -34,7 +33,6 @@ export default (props) => {
             />
             <Button
                 className="slider-navigation__button slider-navigation__button--next"
-                label="Next slide"
                 isLabelVisible
                 iconName="arrow-right"
                 extraAttrs={{

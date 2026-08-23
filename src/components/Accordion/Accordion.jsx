@@ -4,6 +4,7 @@ export default (props) => {
     const {
         name,
         isOpen,
+        id,
         title,
         children,
     } = props
@@ -17,7 +18,12 @@ export default (props) => {
             >
                 <summary className="accordion__summary">
                     <h3 className="accordion__title h6">
-                        {title}
+                        <span
+                            aria-details={id}
+                            role="term"
+                        >
+                            {title}
+                        </span>
                     </h3>
                     <span className="accordion__indicator">
                         <svg>
@@ -26,7 +32,11 @@ export default (props) => {
                     </span>
                 </summary>
             </details>
-            <div className="accordion__content">
+            <div
+                className="accordion__content"
+                id={id}
+                role="definition"
+            >
                 <div className="accordion__content-inner">
                     <div className="accordion__content-body">
                         {children}

@@ -27,6 +27,7 @@ export default () => {
                     <Accordion
                         name="questions"
                         isOpen={index === 0}
+                        id={`question-${index}`}
                         title={question}
                         key={index}
                     >

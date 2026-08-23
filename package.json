@@ -19,6 +19,6 @@
     "@a1rth/css-normalize": "^1.2.4",
     "clsx": "^2.1.1",
     "imask": "^7.6.1",
-    "swiper": "^14.0.6"
+    "swiper": "^14.1.0"
   }
 }
