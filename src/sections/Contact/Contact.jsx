@@ -6,11 +6,12 @@ import Action from '@/components/Action'
 export default () => {
     const titleId = 'contact-title'
 
-    const contactItems = [{
-        label: '+1-123-456-7890', href: 'tel:+11234567890',
-    }, {
-        label: 'info@damienbraunphotography.com', href: 'mailto:info@damienbraunphotography.com',
-    },]
+    const contactItems = [
+        { label: '+1-123-456-7890', href: 'tel:+11234567890'},
+        { label: 'info@damienbraunphotography.com', href: 'mailto:info@damienbraunphotography.com' },
+    ]
+
+    const exampleEmail = 'example@example.com'
 
     return (
         <section
@@ -61,25 +62,32 @@ export default () => {
                         </p>
                     </div>
                 </div>
-                <form className="contact__form" action="">
+                <form className="contact__form" noValidate data-js-form="">
                     <div className="contact__form-body">
                         <Field
                             className="contact__form-cell"
                             label="First Name"
                             placeholder="Ivan"
                             isRequired
+                            minLength={2}
+                            maxLength={50}
+                            autoComplete="given-name"
                         />
                         <Field
                             className="contact__form-cell"
                             label="Last Name"
                             placeholder="Ivanov"
+                            autoComplete="family-name"
                         />
                         <Field
                             className="contact__form-cell"
+                            type="email"
                             label="Email"
-                            placeholder="example@example.com"
+                            placeholder={exampleEmail}
                             inputMode="email"
                             isRequired
+                            title={`Please enter a valid email address, e.g ${exampleEmail}`}
+                            autoComplete="email"
                         />
                         <Field
                             className="contact__form-cell"
@@ -87,6 +95,7 @@ export default () => {
                             placeholder="(999) 999-99-99"
                             inputMode="tel"
                             mask="+0 (000) 000-00-00"
+                            autoComplete="tel"
                         />
                         <Field
                             className="contact__form-cell contact__form-cell--wide"
@@ -94,6 +103,9 @@ export default () => {
                             placeholder="Hello! I have a suggestion..."
                             type="textarea"
                             isRequired
+                            minLength={10}
+                            maxLength={15}
+                            autoComplete="off"
                         />
                     </div>
                     <Action

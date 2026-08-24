@@ -15,6 +15,10 @@ export default (props) => {
         isRequired,
         inputMode,
         mask,
+        minLength,
+        maxLength,
+        title,
+        autoComplete,
     } = props
 
     const Component = type === 'textarea'
@@ -26,6 +30,8 @@ export default (props) => {
     if (mask) {
         extraAttrs['data-js-input-mask'] = mask
     }
+
+    const errorId = `${id}-error`
 
     return (
         <div className={clsx(className, "field")}>
@@ -47,7 +53,15 @@ export default (props) => {
                 required={isRequired}
                 inputMode={inputMode}
                 {...extraAttrs}
+                minLength={minLength}
+                maxLength={maxLength}
+                title={title}
+                aria-errormessage={isRequired ? errorId : undefined}
+                autoComplete={autoComplete}
             />
+            {isRequired && (
+                <div className="field__errors" id={errorId} data-js-form-field-errors=""></div>
+            )}
         </div>
     )
 }
