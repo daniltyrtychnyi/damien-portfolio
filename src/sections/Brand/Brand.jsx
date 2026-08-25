@@ -1,4 +1,5 @@
 import './Brand.scss'
+import img from '/src/assets/images/brand/1.svg'
 import Marquee from '@/components/Marquee'
 
 export default () => {
@@ -14,7 +15,7 @@ export default () => {
             </h2>
             <div className="brand__image-wrapper container">
                 <img
-                    src='/src/assets/images/brand/1.svg'
+                    src={img}
                     alt=""
                     className="brand__image"
                     width={1058}

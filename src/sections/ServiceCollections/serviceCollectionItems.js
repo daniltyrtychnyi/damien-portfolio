@@ -1,19 +1,26 @@
+import imgDesktopPortraits_1 from '/src/assets/images/service-collections/portraits/1.png'
+import imgMobilePortraits_1 from '/src/assets/images/service-collections/portraits/1_mobile.png'
+import imgDesktopEvents_1 from '/src/assets/images/service-collections/events/1.png'
+import imgMobileEvents_1 from '/src/assets/images/service-collections/events/1_mobile.png'
+import imgDesktopCommercial_1 from '/src/assets/images/service-collections/commercial/1.png'
+import imgMobileCommercial_1 from '/src/assets/images/service-collections/commercial/1_mobile.png'
+
 const serviceCollectionItems = [
     {
         title: 'Portrait Photography',
         description: 'Our portrait photography service is all about showcasing your unique personality. Whether you need a professional headshot, a family portrait, or a personal photoshoot, we create images that reflect your true self. We work closely with you to bring out your best angles and expressions, ensuring every portrait tells your story.',
         images: [
             {
-                desktopImgSrc: '/src/assets/images/service-collections/portraits/1.png',
-                mobileImgSrc: '/src/assets/images/service-collections/portraits/1_mobile.png',
+                desktopImgSrc: imgDesktopPortraits_1,
+                mobileImgSrc: imgMobilePortraits_1,
             },
             {
-                desktopImgSrc: '/src/assets/images/service-collections/portraits/1.png',
-                mobileImgSrc: '/src/assets/images/service-collections/portraits/1_mobile.png',
+                desktopImgSrc: imgDesktopPortraits_1,
+                mobileImgSrc: imgMobilePortraits_1,
             },
             {
-                desktopImgSrc: '/src/assets/images/service-collections/portraits/1.png',
-                mobileImgSrc: '/src/assets/images/service-collections/portraits/1_mobile.png',
+                desktopImgSrc: imgDesktopPortraits_1,
+                mobileImgSrc: imgMobilePortraits_1,
             },
         ],
         services: [
@@ -51,16 +58,16 @@ const serviceCollectionItems = [
         description: 'Our event photography service is dedicated to capturing the magic of your special occasions. Whether it\'s a wedding, corporate event, or milestone celebration, we\'re there to document every heartfelt moment. We blend into the background, ensuring natural and candid shots that reflect the emotions of the day.',
         images: [
             {
-                desktopImgSrc: '/src/assets/images/service-collections/events/1.png',
-                mobileImgSrc: '/src/assets/images/service-collections/events/1_mobile.png',
+                desktopImgSrc: imgDesktopEvents_1,
+                mobileImgSrc: imgMobileEvents_1,
             },
             {
-                desktopImgSrc: '/src/assets/images/service-collections/events/1.png',
-                mobileImgSrc: '/src/assets/images/service-collections/events/1_mobile.png',
+                desktopImgSrc: imgDesktopEvents_1,
+                mobileImgSrc: imgMobileEvents_1,
             },
             {
-                desktopImgSrc: '/src/assets/images/service-collections/events/1.png',
-                mobileImgSrc: '/src/assets/images/service-collections/events/1_mobile.png',
+                desktopImgSrc: imgDesktopEvents_1,
+                mobileImgSrc: imgMobileEvents_1,
             },
         ],
         services: [
@@ -98,16 +105,16 @@ const serviceCollectionItems = [
         description: 'In the world of business, a compelling image can make all the difference. Our commercial photography service is designed to enhance your brand\'s visual identity. We create striking images for your products, services, and marketing campaigns that leave a lasting impact on your audience.',
         images: [
             {
-                desktopImgSrc: '/src/assets/images/service-collections/commercial/1.png',
-                mobileImgSrc: '/src/assets/images/service-collections/commercial/1_mobile.png',
+                desktopImgSrc: imgDesktopCommercial_1,
+                mobileImgSrc: imgMobileCommercial_1,
             },
             {
-                desktopImgSrc: '/src/assets/images/service-collections/commercial/1.png',
-                mobileImgSrc: '/src/assets/images/service-collections/commercial/1_mobile.png',
+                desktopImgSrc: imgDesktopCommercial_1,
+                mobileImgSrc: imgMobileCommercial_1,
             },
             {
-                desktopImgSrc: '/src/assets/images/service-collections/commercial/1.png',
-                mobileImgSrc: '/src/assets/images/service-collections/commercial/1_mobile.png',
+                desktopImgSrc: imgDesktopCommercial_1,
+                mobileImgSrc: imgMobileCommercial_1,
             },
         ],
         services: [

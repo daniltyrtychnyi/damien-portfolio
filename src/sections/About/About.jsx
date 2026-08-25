@@ -1,6 +1,7 @@
 import './About.scss'
 import Section from '@/layouts/Section'
 import {Picture} from 'minista/assets'
+import img from '@/assets/images/about/1.png'
 import Socials from '@/components/Socials'
 import Button from '@/components/Button'
 
@@ -18,7 +19,7 @@ export default () => {
             <div className="about__main">
                 <div className="about__image">
                     <Picture
-                        src="/src/assets/images/about/1.png"
+                        src={img}
                         formats={['webp', 'avif', 'inherit']}
                         loading="lazy"
                     />

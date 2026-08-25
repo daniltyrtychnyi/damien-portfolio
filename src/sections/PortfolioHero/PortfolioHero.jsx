@@ -1,26 +1,33 @@
 import './PortfolioHero.scss'
 import PageHero from '@/components/PageHero'
+import imgDesktop from '/src/assets/images/page-hero/portfolio/bg.png'
+import imgLaptop from '/src/assets/images/page-hero/portfolio/bg_laptop.jpg'
+import imgPartners_1 from '/src/assets/images/page-hero/portfolio/partners/1.svg'
+import imgPartners_2 from '/src/assets/images/page-hero/portfolio/partners/2.svg'
+import imgPartners_3 from '/src/assets/images/page-hero/portfolio/partners/3.svg'
+import imgPartners_4 from '/src/assets/images/page-hero/portfolio/partners/4.svg'
+import imgPartners_5 from '/src/assets/images/page-hero/portfolio/partners/5.svg'
 
 export default () => {
     const partnersItems = [
         {
-            imgSrc: '/src/assets/images/page-hero/portfolio/partners/1.svg',
+            imgSrc: imgPartners_1,
             alt: 'Infinity Parker',
         },
         {
-            imgSrc: '/src/assets/images/page-hero/portfolio/partners/2.svg',
+            imgSrc: imgPartners_2,
             alt: 'Omega Million',
         },
         {
-            imgSrc: '/src/assets/images/page-hero/portfolio/partners/3.svg',
+            imgSrc: imgPartners_3,
             alt: 'WheelApp',
         },
         {
-            imgSrc: '/src/assets/images/page-hero/portfolio/partners/4.svg',
+            imgSrc: imgPartners_4,
             alt: 'High Country Club',
         },
         {
-            imgSrc: '/src/assets/images/page-hero/portfolio/partners/5.svg',
+            imgSrc: imgPartners_5,
             alt: 'EdgeKart',
         },
     ]
@@ -32,8 +39,8 @@ export default () => {
             title="Visual Poetry in Pixels"
             mode="portfolio"
             description="Step into a visual journey that encapsulates the essence of my lens. Each photograph in this portfolio is a narrative, a frozen moment in time, and a testament to the artistry and passion poured into every frame. Explore the diverse tapestry of stories I've had the privilege to capture and witness the world through my lens."
-            desktopImageSrc="/src/assets/images/page-hero/portfolio/bg.png"
-            laptopImageSrc="/src/assets/images/page-hero/portfolio/bg_laptop.jpg"
+            desktopImageSrc={imgDesktop}
+            laptopImageSrc={imgLaptop}
             hasDecor
             scrollTarget="Scroll Down To See The Works"
         >

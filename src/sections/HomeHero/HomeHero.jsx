@@ -1,7 +1,9 @@
 import './HomeHero.scss'
+import imgDecor from '@/assets/images/home-hero/decor.svg'
 import Action from '@/components/Action'
 import Marquee from '@/components/Marquee'
 import {Picture} from 'minista/assets'
+import imgBg from '@/assets/images/home-hero/hero-bg.png'
 
 export default () => {
     const titleId = "home-hero-title"
@@ -16,7 +18,7 @@ export default () => {
                     </h1>
                 </div>
                 <img
-                    src="/src/assets/images/home-hero/decor.svg"
+                    src={imgDecor}
                     alt=""
                     className="hero__main-image hidden-laptop-s"
                     width={346}
@@ -37,7 +39,7 @@ export default () => {
             />
             <div className="hero__image-wrapper container">
                 <Picture
-                    src="/src/assets/images/home-hero/hero-bg.png"
+                    src={imgBg}
                     formats={['webp', 'avif', 'inherit']}
                 />
             </div>

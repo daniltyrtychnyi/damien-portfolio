@@ -1,5 +1,7 @@
 import './ReviewCard.scss'
 import Socials from '@/components/Socials'
+import imgStarsUnfilled from '@/assets/images/rating/stars_unfilled.svg'
+import imgStarsFilled from '@/assets/images/rating/stars_filled.svg'
 
 export default (props) => {
     const {
@@ -33,7 +35,7 @@ export default (props) => {
                 }}
             >
                 <img
-                    src="/rating/stars_unfilled.svg"
+                    src={imgStarsUnfilled}
                     alt=""
                     className="review-card__stars-unfilled"
                     width={140}
@@ -41,7 +43,7 @@ export default (props) => {
                     loading="lazy"
                 />
                 <img
-                    src="/rating/stars_filled.svg"
+                    src={imgStarsFilled}
                     alt=""
                     className="review-card__stars-filled"
                     width={140}

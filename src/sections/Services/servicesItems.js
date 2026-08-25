@@ -1,8 +1,10 @@
+import img from '@/assets/images/services/1.jpg'
+
 const serviceItems = [
     {
         title: 'Events',
         description: 'Our event photography service is dedicated to capturing the magic of your special occasions. Whether it\'s a wedding, corporate event, or milestone celebration, we\'re there to document every heartfelt moment. We blend into the background, ensuring natural and candid shots that reflect the emotions of the day.',
-        imgSrc: '/src/assets/images/services/1.jpg',
+        imgSrc: img,
         features: [
             'Coverage for weddings, parties, corporate functions, and more.',
             'Skilled photographers who know how to seize the moment.',
@@ -13,7 +15,7 @@ const serviceItems = [
     {
         title: 'Events',
         description: 'Our event photography service is dedicated to capturing the magic of your special occasions. Whether it\'s a wedding, corporate event, or milestone celebration, we\'re there to document every heartfelt moment. We blend into the background, ensuring natural and candid shots that reflect the emotions of the day.',
-        imgSrc: '/src/assets/images/services/1.jpg',
+        imgSrc: img,
         features: [
             'Coverage for weddings, parties, corporate functions, and more.',
             'Skilled photographers who know how to seize the moment.',
@@ -24,7 +26,7 @@ const serviceItems = [
     {
         title: 'Events',
         description: 'Our event photography service is dedicated to capturing the magic of your special occasions. Whether it\'s a wedding, corporate event, or milestone celebration, we\'re there to document every heartfelt moment. We blend into the background, ensuring natural and candid shots that reflect the emotions of the day.',
-        imgSrc: '/src/assets/images/services/1.jpg',
+        imgSrc: img,
         features: [
             'Coverage for weddings, parties, corporate functions, and more.',
             'Skilled photographers who know how to seize the moment.',
