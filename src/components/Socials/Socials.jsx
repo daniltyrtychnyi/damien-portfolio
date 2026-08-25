@@ -6,6 +6,10 @@ export default (props) => {
     const {
         className,
         /**
+         * '' (default) | 'big-column-gap'
+         */
+        mode,
+        /**
          * 'circle' | 'circle-large'
          */
         buttonMode,
@@ -27,7 +31,9 @@ export default (props) => {
     ]
 
     return (
-        <div className={clsx(className, 'soc1als')}>
+        <div className={clsx(className, 'soc1als', {
+            [`soc1als--${mode}`]: mode,
+        })}>
             <ul className="soc1als__list">
                 {socialsLinks.map(({ label, iconName }, index) => (
                     <li className="soc1als__item" key={index}>

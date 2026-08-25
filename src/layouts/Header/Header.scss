@@ -1,4 +1,6 @@
 .header {
+  --headerOffsetY: #{fluid(30, 20)};
+
   position: sticky;
   top: 0;
   z-index: 100;
@@ -20,8 +22,12 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 16px;
-    padding-top: fluid(30, 10);
+    padding-block: var(--headerOffsetY);
     border-inline: var(--border);
+
+    @include tablet {
+      padding-bottom: 0;
+    }
   }
 
   &__overlay-menu-dialog {
@@ -48,34 +54,36 @@
       translate: 50%;
     }
 
-    &[open] {
-      display: flex;
+    @include tablet {
+      &[open] {
+        display: flex;
 
-      .header {
-        &__menu,
-        &__button {
-          font-size: 18px;
-        }
+        .header {
+          &__menu,
+          &__button {
+            font-size: 18px;
+          }
 
-        &__menu {
-          &-item {
-            border-radius: var(--border-radius-l);
+          &__menu {
+            &-item {
+              border-radius: var(--border-radius-l);
+            }
+          }
+
+          &__button {
+            width: 100%;
+            max-width: 300px;
           }
         }
 
-        &__button {
-          width: 100%;
-          max-width: 300px;
+        @starting-style {
+          @include starting-styles;
         }
       }
 
-      @starting-style {
+      &:not([open]) {
         @include starting-styles;
       }
-    }
-
-    &:not([open]) {
-      @include starting-styles;
     }
   }
 
@@ -88,6 +96,10 @@
 
   &__menu {
     font-weight: 500;
+
+    @include tablet-above {
+      margin-bottom: calc(var(--headerOffsetY) * -1)
+    }
 
     @include tablet {
       overflow-y: auto;

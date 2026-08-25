@@ -13,6 +13,9 @@ class FormValidation {
 
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
+
+        if (!this.rootElement) return
+
         this.bindEvents()
     }
 

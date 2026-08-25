@@ -19,7 +19,7 @@ export default (props) => {
                 <li
                     className={clsx("accordion-group__item", {
                         'accordion-group__item--last-item-in-column':
-                            columns > 1 && quantityItemsInColumn / (index + 1) === 1,
+                            columns > 1 && (index + 1) % quantityItemsInColumn === 0,
                     })}
                     key={index}
                 >

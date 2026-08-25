@@ -5,6 +5,12 @@
   border: var(--border);
   border-radius: 100px;
 
+  &--big-column-gap {
+    .soc1als__list {
+      column-gap: fluid-to-laptop(16, 10);
+    }
+  }
+
   &__list {
     display: flex;
     align-items: center;

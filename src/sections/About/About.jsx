@@ -61,7 +61,7 @@ export default () => {
                             </li>
                         </ul>
                         <div className="about__extra">
-                            <Socials className="about__soc1als" buttonMode="circle"/>
+                            <Socials className="about__soc1als" mode="big-column-gap" buttonMode="circle"/>
                             <div className="about__actions">
                                 <Button
                                     className="about__button"
