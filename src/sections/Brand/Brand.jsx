@@ -1,5 +1,5 @@
 import './Brand.scss'
-import img from '/src/assets/images/brand/1.svg'
+import img from '@/assets/images/brand/1.svg'
 import Marquee from '@/components/Marquee'
 
 export default () => {

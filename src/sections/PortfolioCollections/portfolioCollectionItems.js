@@ -1,12 +1,12 @@
-import imgPortrait_1 from '/src/assets/images/portfolio-collections/portraits/1.jpg'
-import imgPortrait_2 from '/src/assets/images/portfolio-collections/portraits/2.jpg'
-import imgPortrait_3 from '/src/assets/images/portfolio-collections/portraits/3.jpg'
-import imgEvent_1 from '/src/assets/images/portfolio-collections/events/1.jpg'
-import imgEvent_2 from '/src/assets/images/portfolio-collections/events/2.jpg'
-import imgEvent_3 from '/src/assets/images/portfolio-collections/events/3.jpg'
-import imgCommercial_1 from '/src/assets/images/portfolio-collections/commercial/1.jpg'
-import imgCommercial_2 from '/src/assets/images/portfolio-collections/commercial/2.jpg'
-import imgCommercial_3 from '/src/assets/images/portfolio-collections/commercial/3.jpg'
+import imgPortrait_1 from '@/assets/images/portfolio-collections/portraits/1.jpg'
+import imgPortrait_2 from '@/assets/images/portfolio-collections/portraits/2.jpg'
+import imgPortrait_3 from '@/assets/images/portfolio-collections/portraits/3.jpg'
+import imgEvent_1 from '@/assets/images/portfolio-collections/events/1.jpg'
+import imgEvent_2 from '@/assets/images/portfolio-collections/events/2.jpg'
+import imgEvent_3 from '@/assets/images/portfolio-collections/events/3.jpg'
+import imgCommercial_1 from '@/assets/images/portfolio-collections/commercial/1.jpg'
+import imgCommercial_2 from '@/assets/images/portfolio-collections/commercial/2.jpg'
+import imgCommercial_3 from '@/assets/images/portfolio-collections/commercial/3.jpg'
 
 const portfolioCollectionItems = [
     {

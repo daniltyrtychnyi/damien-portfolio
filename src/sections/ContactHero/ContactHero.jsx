@@ -1,7 +1,7 @@
 import PageHero from '@/components/PageHero'
-import imgDesktop from '/src/assets/images/page-hero/contact/bg.png'
-import imgLaptop from '/src/assets/images/page-hero/contact/bg_laptop.png'
-import imgMobile from '/src/assets/images/page-hero/contact/bg_mobile.png'
+import imgDesktop from '@/assets/images/page-hero/contact/bg.png'
+import imgLaptop from '@/assets/images/page-hero/contact/bg_laptop.png'
+import imgMobile from '@/assets/images/page-hero/contact/bg_mobile.png'
 
 export default () => {
     return (

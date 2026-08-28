@@ -14,33 +14,14 @@
     border-radius: var(--border-radius-m);
   }
 
-  &::before,
-  &::after {
-    @include square(fluid(500, 325));
-
-    content: '';
-    position: absolute;
-    z-index: -1;
-    border-radius: 22px;
-    background-image: linear-gradient(
-            207deg,
-            #18181B 0%,
-            rgb(24 24 27 / 0) 83.33%
-    );
-  }
+  @include card-decorations;
 
   &::before {
-    left: 0;
-    bottom: 0;
     translate: -57% 69%;
-    rotate: 131deg;
   }
 
   &::after {
-    top: 0;
-    right: 0;
     translate: 67% -55%;
-    rotate: -145deg;
   }
 
   &__title {

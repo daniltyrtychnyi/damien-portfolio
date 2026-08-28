@@ -1,6 +1,6 @@
 import PageHero from '@/components/PageHero'
-import imgDesktop from '/src/assets/images/page-hero/services/bg.png'
-import imgLaptop from '/src/assets/images/page-hero/services/bg_laptop.jpg'
+import imgDesktop from '@/assets/images/page-hero/services/bg.png'
+import imgLaptop from '@/assets/images/page-hero/services/bg_laptop.jpg'
 
 export default () => {
     return (

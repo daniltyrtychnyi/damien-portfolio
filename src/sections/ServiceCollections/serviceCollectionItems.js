@@ -1,9 +1,9 @@
-import imgDesktopPortraits_1 from '/src/assets/images/service-collections/portraits/1.png'
-import imgMobilePortraits_1 from '/src/assets/images/service-collections/portraits/1_mobile.png'
-import imgDesktopEvents_1 from '/src/assets/images/service-collections/events/1.png'
-import imgMobileEvents_1 from '/src/assets/images/service-collections/events/1_mobile.png'
-import imgDesktopCommercial_1 from '/src/assets/images/service-collections/commercial/1.png'
-import imgMobileCommercial_1 from '/src/assets/images/service-collections/commercial/1_mobile.png'
+import imgDesktopPortraits_1 from '@/assets/images/service-collections/portraits/1.png'
+import imgMobilePortraits_1 from '@/assets/images/service-collections/portraits/1_mobile.png'
+import imgDesktopEvents_1 from '@/assets/images/service-collections/events/1.png'
+import imgMobileEvents_1 from '@/assets/images/service-collections/events/1_mobile.png'
+import imgDesktopCommercial_1 from '@/assets/images/service-collections/commercial/1.png'
+import imgMobileCommercial_1 from '@/assets/images/service-collections/commercial/1_mobile.png'
 
 const serviceCollectionItems = [
     {

@@ -1,12 +1,12 @@
 import './PortfolioHero.scss'
 import PageHero from '@/components/PageHero'
-import imgDesktop from '/src/assets/images/page-hero/portfolio/bg.png'
-import imgLaptop from '/src/assets/images/page-hero/portfolio/bg_laptop.jpg'
-import imgPartners_1 from '/src/assets/images/page-hero/portfolio/partners/1.svg'
-import imgPartners_2 from '/src/assets/images/page-hero/portfolio/partners/2.svg'
-import imgPartners_3 from '/src/assets/images/page-hero/portfolio/partners/3.svg'
-import imgPartners_4 from '/src/assets/images/page-hero/portfolio/partners/4.svg'
-import imgPartners_5 from '/src/assets/images/page-hero/portfolio/partners/5.svg'
+import imgDesktop from '@/assets/images/page-hero/portfolio/bg.png'
+import imgLaptop from '@/assets/images/page-hero/portfolio/bg_laptop.jpg'
+import imgPartners_1 from '@/assets/images/page-hero/portfolio/partners/1.svg'
+import imgPartners_2 from '@/assets/images/page-hero/portfolio/partners/2.svg'
+import imgPartners_3 from '@/assets/images/page-hero/portfolio/partners/3.svg'
+import imgPartners_4 from '@/assets/images/page-hero/portfolio/partners/4.svg'
+import imgPartners_5 from '@/assets/images/page-hero/portfolio/partners/5.svg'
 
 export default () => {
     const partnersItems = [

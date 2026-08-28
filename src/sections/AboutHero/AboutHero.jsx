@@ -1,7 +1,7 @@
 import './AboutHero.scss'
 import PageHero from '@/components/PageHero'
-import imgDesktop from '/src/assets/images/page-hero/about/bg.png'
-import imgLaptop from '/src/assets/images/page-hero/about/bg_laptop.jpg'
+import imgDesktop from '@/assets/images/page-hero/about/bg.png'
+import imgLaptop from '@/assets/images/page-hero/about/bg_laptop.jpg'
 
 export default () => {
     return (
