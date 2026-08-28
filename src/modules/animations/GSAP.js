@@ -4,9 +4,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 ScrollTrigger.defaults({
-    markers: import.meta.env.DEV,
     start: 'top center',
     end: 'bottom center',
+    toggleActions: 'play reverse play reverse'
 })
 
 export { gsap, ScrollTrigger }

@@ -7,6 +7,7 @@ export default (props) => {
     const {
         className,
         href,
+        target,
         type,
         title,
         subTitle,
@@ -17,7 +18,7 @@ export default (props) => {
         extraAttrs,
     } = props
 
-    const { Component, specificProps } = getPropsFromPolymorphicTag(href, type)
+    const { Component, specificProps } = getPropsFromPolymorphicTag(href, target, type)
 
     return (
         <Component

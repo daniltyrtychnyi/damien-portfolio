@@ -1,4 +1,4 @@
-const getPropsFromPolymorphicTag = (href, target, type) => {
+const getPropsFromPolymorphicTag = (href, target, type = 'button') => {
     const isLink = href !== undefined
 
     return {
