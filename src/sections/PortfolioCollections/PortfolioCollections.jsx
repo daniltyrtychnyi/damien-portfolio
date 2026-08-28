@@ -18,14 +18,18 @@ export default () => {
                         className="portfolio-collections__section container"
                         aria-labelledby={titleId}
                         key={index}
+                        data-js-portfolio-collection=""
                     >
                         <header className="portfolio-collections__header">
-                            <h2 className="portfolio-collections__title h3" id={titleId}>
+                            <h2 className="portfolio-collections__title h3" id={titleId} data-js-portfolio-collection-title="">
                                 {portfolioCollectionItem.title}
                             </h2>
                             <SliderNavigation
                                 id={navigationTargetElementId}
                                 isLaptopSHidden
+                                extraAttrs={{
+                                    'data-js-portfolio-collection-actions': '',
+                                }}
                             />
                         </header>
                         <div className="portfolio-collections__body">
@@ -60,6 +64,9 @@ export default () => {
                                             allowTouchMove: false,
                                         },
                                     }
+                                }}
+                                extraAttrs={{
+                                    'data-js-portfolio-collection-item': '',
                                 }}
                             >
                                 {portfolioCollectionItem.items.map((portfolioCardItem, index) => (

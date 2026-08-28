@@ -16,15 +16,16 @@ export default () => {
                 label: "Know More"
             }}
         >
-            <div className="about__main">
+            <div className="about__main" data-js-about="">
                 <div className="about__image">
                     <Picture
                         src={img}
                         formats={['webp', 'avif', 'inherit']}
                         loading="lazy"
+                        data-js-about-image=""
                     />
                 </div>
-                <div className="about__body">
+                <div className="about__body" data-js-about-body="">
                     <div className="about__introduction">
                         <h3 className="about__title h4">
                             Introduction

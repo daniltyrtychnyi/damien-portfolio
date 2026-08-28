@@ -21,8 +21,16 @@ export default () => {
             titleId="questions-title"
             subTitle="FAQ’s"
             title="Frequently Asked Questions"
+            extraAttrs={{
+                'data-js-questions': '',
+            }}
         >
-            <AccordionGroup columns={2}>
+            <AccordionGroup
+                columns={2}
+                extraAttrs={{
+                    'data-js-questions-accordion-group': '',
+                }}
+            >
                 {questions.map((question, index) => (
                     <Accordion
                         name="questions"

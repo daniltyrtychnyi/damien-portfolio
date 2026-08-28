@@ -17,6 +17,7 @@ export default (props) => {
         buttonProps = null,
         extraInfo = null,
         children,
+        extraAttrs,
     } = props
 
     return (
@@ -25,10 +26,12 @@ export default (props) => {
                 [`section--${mode}`]: mode
             })}
             aria-labelledby={titleId}
+            data-js-section=""
+            {...extraAttrs}
         >
             <header className="section__header">
                 <div className="section__main">
-                    <div className="section__info">
+                    <div className="section__info" data-js-section-info="">
                         <p className="section__subtitle">
                             {subTitle}
                         </p>
@@ -37,7 +40,7 @@ export default (props) => {
                         </h2>
                     </div>
                     {extraInfo && (
-                        <div className="section__extra">
+                        <div className="section__extra" data-js-section-extra="">
                             <p className="section__label">
                                 {extraInfo.label}
                             </p>
@@ -48,7 +51,7 @@ export default (props) => {
                     )}
                 </div>
                 {(sliderProps || buttonProps) && (
-                    <div className="section__actions">
+                    <div className="section__actions" data-js-section-actions="">
                         {sliderProps && (
                             <SliderNavigation
                                 id={sliderProps.sliderId}
@@ -68,7 +71,7 @@ export default (props) => {
                     </div>
                 )}
             </header>
-            <div className="section__body">
+            <div className="section__body" data-js-section-body="">
                 {children}
             </div>
         </section>

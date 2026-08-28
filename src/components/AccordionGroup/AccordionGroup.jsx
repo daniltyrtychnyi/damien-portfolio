@@ -5,6 +5,7 @@ export default (props) => {
     const {
         columns = 1,
         children,
+        extraAttrs,
     } = props
 
     const quantityItemsInColumn = Math.ceil(children.length / columns)
@@ -14,6 +15,7 @@ export default (props) => {
             className={clsx("accordion-group", {
                 [`accordion-group--${columns}-columns`]: columns > 1,
             })}
+            {...extraAttrs}
         >
             {children.map((child, index) => (
                 <li

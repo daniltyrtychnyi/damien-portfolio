@@ -22,15 +22,21 @@ export default () => {
             buttonProps={{
                 label: "View All Services",
             }}
+            extraAttrs={{
+                'data-js-services': '',
+            }}
         >
             <Slider
                 navigationTargetElementId={sliderId}
                 isLaptopSVisible
             >
                 {servicesItems.map(({title, description, imgSrc, features}, index) => (
-                    <div className="services__wrapper" key={index}>
+                    <div
+                        className="services__wrapper"
+                        key={index}
+                    >
                         <div className="services__main">
-                            <div className="services__info">
+                            <div className="services__info" data-js-services-info="">
                                 <Action
                                     className="services__action"
                                     href="/"
@@ -47,13 +53,19 @@ export default () => {
                                 <p className="services__label">
                                     Service Highlights
                                 </p>
-                                <FeatureGroup items={features}/>
+                                <FeatureGroup
+                                    items={features}
+                                    extraAttrs={{
+                                        'data-js-services-feature': '',
+                                    }}
+                                />
                             </div>
                         </div>
                         <Picture
                             className="services__image"
                             src={imgSrc}
                             loading="lazy"
+                            data-js-services-image=""
                         />
                     </div>
                 ))}

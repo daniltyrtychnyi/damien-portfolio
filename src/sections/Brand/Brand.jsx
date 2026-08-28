@@ -9,11 +9,12 @@ export default () => {
         <section
             className="brand"
             aria-labelledby={titleId}
+            data-js-brand=""
         >
             <h2 className="visually-hidden" id={titleId}>
                 Damien Braun
             </h2>
-            <div className="brand__image-wrapper container">
+            <div className="brand__image-wrapper container" data-js-brand-image="">
                 <img
                     src={img}
                     alt=""

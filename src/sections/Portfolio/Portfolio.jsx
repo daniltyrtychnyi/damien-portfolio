@@ -19,6 +19,9 @@ export default () => {
             buttonProps={{
                 label: "View All Works",
             }}
+            extraAttrs={{
+                'data-js-portfolio': '',
+            }}
         >
             <Slider
                 navigationTargetElementId={sliderId}
@@ -52,12 +55,12 @@ export default () => {
                     },
                 }}
                 isLaptopSVisible
+                extraAttrs={{
+                    'data-js-portfolio-item': '',
+                }}
             >
                 {portfolioItems.map((portfolioItem, index) => (
-                    <PortfolioCard
-                        {...portfolioItem}
-                        key={index}
-                    />
+                    <PortfolioCard {...portfolioItem} key={index} />
                 ))}
             </Slider>
         </Section>

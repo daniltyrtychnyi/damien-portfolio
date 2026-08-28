@@ -23,6 +23,9 @@ export default () => {
                 label: 'Total Reviews',
                 value: '323',
             }}
+            extraAttrs={{
+                'data-js-reviews': '',
+            }}
         >
             <Slider
                 navigationTargetElementId={sliderId}
@@ -48,12 +51,12 @@ export default () => {
                     },
                 }}
                 isLaptopSVisible
+                extraAttrs={{
+                    'data-js-reviews-item': '',
+                }}
             >
                 {reviewItems.map((reviewItem, index) => (
-                    <ReviewCard
-                        {...reviewItem}
-                        key={index}
-                    />
+                    <ReviewCard {...reviewItem} key={index} />
                 ))}
             </Slider>
         </Section>

@@ -36,10 +36,13 @@ export default () => {
             titleId="journey-title"
             subTitle="Journey"
             title="Damien's Journey - A Timeline"
+            extraAttrs={{
+                'data-js-journey': '',
+            }}
         >
             <ul className="journey__list">
                 {journeyItems.map((journeyItem, index) => (
-                    <li className="journey__item" key={index}>
+                    <li className="journey__item" key={index} data-js-journey-item="">
                         <TimeCard {...journeyItem} />
                     </li>
                 ))}

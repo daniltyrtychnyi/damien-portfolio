@@ -11,6 +11,7 @@ export default (props) => {
         mode = '',
         isLaptopSHidden = false,
         isLaptopSVisible = false,
+        extraAttrs,
     } = props
 
     return (
@@ -22,6 +23,7 @@ export default (props) => {
             })}
             id={id}
             data-js-slider-navigation=""
+            {...extraAttrs}
         >
             <Button
                 className="slider-navigation__button slider-navigation__button--previous"

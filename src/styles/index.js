@@ -1,4 +1,5 @@
 import '@a1rth/css-normalize'
+import 'lenis/dist/lenis.css'
 import './fonts.scss'
 import './variables.scss'
 import './globals.scss'

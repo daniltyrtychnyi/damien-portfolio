@@ -14,6 +14,7 @@ export default (props) => {
          * '' (default) | 'grey-50' | 'underline'
          */
         mode = '',
+        extraAttrs,
     } = props
 
     const { Component, specificProps } = getPropsFromPolymorphicTag(href, type)
@@ -24,6 +25,7 @@ export default (props) => {
                 [`action--${mode}`]: mode,
             })}
             {...specificProps}
+            {...extraAttrs}
         >
             <span className="action__top">
                 <span className="action__title">

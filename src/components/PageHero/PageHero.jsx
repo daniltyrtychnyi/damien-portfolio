@@ -40,6 +40,7 @@ export default (props) => {
                 [`page-hero--${mode}`]: mode,
             })}
             aria-labelledby={titleId}
+            data-js-page-hero=""
         >
             <div className="page-hero__inner container">
                 <div
@@ -52,6 +53,7 @@ export default (props) => {
                         className="page-hero__image"
                         src={desktopImageSrc}
                         artDirectives={responsiveSources}
+                        data-js-page-hero-image=""
                     />
                     {hasSocials && (
                         <Socials
@@ -60,7 +62,7 @@ export default (props) => {
                         />
                     )}
                     <header className="page-hero__header">
-                        <div className="page-hero__header-main">
+                        <div className="page-hero__header-main" data-js-page-hero-header-main="">
                             <div className="page-hero__info">
                                 <p className="page-hero__subtitle">
                                     {subTitle}
@@ -73,7 +75,7 @@ export default (props) => {
                                 <div className="page-hero__metrics">
                                     <dl className="page-hero__metrics-list">
                                         {metrics.map(({label, value, unit}, index) => (
-                                            <div className="page-hero__metrics-item" key={index}>
+                                            <div className="page-hero__metrics-item" key={index} data-js-page-hero-metric-item="">
                                                 <dt className="page-hero__metrics-key">
                                                     {label}
                                                 </dt>
@@ -93,9 +95,8 @@ export default (props) => {
                                 </div>
                             )}
                         </div>
-
                     </header>
-                    <p className="page-hero__scroll hidden-laptop">
+                    <p className="page-hero__scroll hidden-laptop" data-js-page-hero-scroll="">
                         {scrollTarget}
                     </p>
                 </div>

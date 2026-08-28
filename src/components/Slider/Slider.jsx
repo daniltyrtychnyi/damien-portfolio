@@ -13,6 +13,7 @@ export default (props) => {
         navigationMode = '',
         isLaptopSHidden = false,
         isLaptopSVisible = false,
+        extraAttrs,
     } = props
 
     return (
@@ -29,7 +30,7 @@ export default (props) => {
             >
                 <ul className="slider__list swiper-wrapper">
                     {children.map((slide, index) => (
-                        <li className="slider__item swiper-slide" key={index}>
+                        <li className="slider__item swiper-slide" key={index} {...extraAttrs}>
                             {slide}
                         </li>
                     ))}

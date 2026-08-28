@@ -18,9 +18,10 @@ export default () => {
                         className="service-collections__section container"
                         aria-labelledby={titleId}
                         key={index}
+                        data-js-service-collection=""
                     >
                         <header className="service-collections__header">
-                            <div className="service-collections__info">
+                            <div className="service-collections__info" data-js-service-collection-header="">
                                 <h2 className="service-collections__title h3" id={titleId}>
                                     {title}
                                 </h2>
@@ -37,6 +38,9 @@ export default () => {
                             </div>
                             <Slider
                                 navigationMode="offset"
+                                extraAttrs={{
+                                    'data-js-service-collection-item': '',
+                                }}
                             >
                                 {images.map(({desktopImgSrc, mobileImgSrc}, index) => (
                                     <Picture

@@ -1,4 +1,7 @@
 html {
+  scroll-behavior: auto;
+  overflow-x: hidden;
+
   &.is-lock {
     overflow: hidden;
   }
