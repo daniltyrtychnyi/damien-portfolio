@@ -1,7 +1,5 @@
 import './PortfolioHero.scss'
 import PageHero from '@/components/PageHero'
-import imgDesktop from '@/assets/images/page-hero/portfolio/bg.png'
-import imgLaptop from '@/assets/images/page-hero/portfolio/bg_laptop.jpg'
 import imgPartners_1 from '@/assets/images/page-hero/portfolio/partners/1.svg'
 import imgPartners_2 from '@/assets/images/page-hero/portfolio/partners/2.svg'
 import imgPartners_3 from '@/assets/images/page-hero/portfolio/partners/3.svg'
@@ -39,8 +37,8 @@ export default () => {
             title="Visual Poetry in Pixels"
             mode="portfolio"
             description="Step into a visual journey that encapsulates the essence of my lens. Each photograph in this portfolio is a narrative, a frozen moment in time, and a testament to the artistry and passion poured into every frame. Explore the diverse tapestry of stories I've had the privilege to capture and witness the world through my lens."
-            desktopImageSrc={imgDesktop}
-            laptopImageSrc={imgLaptop}
+            desktopImageSrc="/src/assets/images/page-hero/portfolio/bg.png"
+            laptopImageSrc="/src/assets/images/page-hero/portfolio/bg_laptop.jpg"
             hasDecor
             scrollTarget="Scroll Down To See The Works"
         >

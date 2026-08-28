@@ -3,7 +3,6 @@ import imgDecor from '@/assets/images/home-hero/decor.svg'
 import Action from '@/components/Action'
 import Marquee from '@/components/Marquee'
 import {Picture} from 'minista/assets'
-import imgBg from '@/assets/images/home-hero/hero-bg.png'
 
 export default () => {
     const titleId = "home-hero-title"
@@ -43,7 +42,7 @@ export default () => {
             />
             <div className="hero__image-wrapper container">
                 <Picture
-                    src={imgBg}
+                    src="/src/assets/images/home-hero/hero-bg.png"
                     formats={['webp', 'avif', 'inherit']}
                 />
             </div>

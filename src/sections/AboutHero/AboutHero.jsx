@@ -1,7 +1,5 @@
 import './AboutHero.scss'
 import PageHero from '@/components/PageHero'
-import imgDesktop from '@/assets/images/page-hero/about/bg.png'
-import imgLaptop from '@/assets/images/page-hero/about/bg_laptop.jpg'
 
 export default () => {
     return (
@@ -41,8 +39,8 @@ export default () => {
                     unit: '%',
                 },
             ]}
-            desktopImageSrc={imgDesktop}
-            laptopImageSrc={imgLaptop}
+            desktopImageSrc="/src/assets/images/page-hero/about/bg.png"
+            laptopImageSrc="/src/assets/images/page-hero/about/bg_laptop.jpg"
             scrollTarget="Scroll Down To See My Journey"
             hasDecor
         >
