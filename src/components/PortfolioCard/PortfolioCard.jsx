@@ -3,11 +3,16 @@ import { Picture } from 'minista/assets'
 import UnderlineLink from '../UnderlineLink'
 
 export default (props) => {
-  const { imgSrc, title, date, dateTime } = props
+  const { imgSrc, alt, title, date, dateTime } = props
 
   return (
     <article className="portfolio-card">
-      <Picture className="portfolio-card__image" src={imgSrc} loading="lazy" />
+      <Picture
+        className="portfolio-card__image"
+        src={imgSrc}
+        alt={alt}
+        loading="lazy"
+      />
       <div className="portfolio-card__body">
         <div className="portfolio-card__info">
           <h3 className="portfolio-card__title h6">{title}</h3>

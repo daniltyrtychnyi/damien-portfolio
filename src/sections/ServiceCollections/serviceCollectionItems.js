@@ -8,16 +8,19 @@ const serviceCollectionItems = [
         desktopImgSrc: '/src/assets/images/service-collections/portraits/1.png',
         mobileImgSrc:
           '/src/assets/images/service-collections/portraits/1_mobile.png',
+        alt: 'Portrait of a woman',
       },
       {
         desktopImgSrc: '/src/assets/images/service-collections/portraits/1.png',
         mobileImgSrc:
           '/src/assets/images/service-collections/portraits/1_mobile.png',
+        alt: 'Portrait of a woman',
       },
       {
         desktopImgSrc: '/src/assets/images/service-collections/portraits/1.png',
         mobileImgSrc:
           '/src/assets/images/service-collections/portraits/1_mobile.png',
+        alt: 'Portrait of a woman',
       },
     ],
     services: [
@@ -59,16 +62,19 @@ const serviceCollectionItems = [
         desktopImgSrc: '/src/assets/images/service-collections/events/1.png',
         mobileImgSrc:
           '/src/assets/images/service-collections/events/1_mobile.png',
+        alt: 'Wedding ceremony',
       },
       {
         desktopImgSrc: '/src/assets/images/service-collections/events/1.png',
         mobileImgSrc:
           '/src/assets/images/service-collections/events/1_mobile.png',
+        alt: 'Wedding ceremony',
       },
       {
         desktopImgSrc: '/src/assets/images/service-collections/events/1.png',
         mobileImgSrc:
           '/src/assets/images/service-collections/events/1_mobile.png',
+        alt: 'Wedding ceremony',
       },
     ],
     services: [
@@ -111,18 +117,21 @@ const serviceCollectionItems = [
           '/src/assets/images/service-collections/commercial/1.png',
         mobileImgSrc:
           '/src/assets/images/service-collections/commercial/1_mobile.png',
+        alt: "L'Impératrice perfume bottle",
       },
       {
         desktopImgSrc:
           '/src/assets/images/service-collections/commercial/1.png',
         mobileImgSrc:
           '/src/assets/images/service-collections/commercial/1_mobile.png',
+        alt: "L'Impératrice perfume bottle",
       },
       {
         desktopImgSrc:
           '/src/assets/images/service-collections/commercial/1.png',
         mobileImgSrc:
           '/src/assets/images/service-collections/commercial/1_mobile.png',
+        alt: "L'Impératrice perfume bottle",
       },
     ],
     services: [

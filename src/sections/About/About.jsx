@@ -20,6 +20,7 @@ export default () => {
           <Picture
             src="/src/assets/images/about/1.png"
             formats={['webp', 'avif', 'inherit']}
+            alt="Damien Braun"
             loading="lazy"
             data-js-about-image=""
           />

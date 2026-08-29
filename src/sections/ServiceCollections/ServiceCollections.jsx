@@ -44,10 +44,11 @@ export default () => {
                     'data-js-service-collection-item': '',
                   }}
                 >
-                  {images.map(({ desktopImgSrc, mobileImgSrc }, index) => (
+                  {images.map(({ desktopImgSrc, mobileImgSrc, alt }, index) => (
                     <Picture
                       src={desktopImgSrc}
                       className="service-collections__image"
+                      alt={alt}
                       loading="lazy"
                       key={index}
                       artDirectives={[
