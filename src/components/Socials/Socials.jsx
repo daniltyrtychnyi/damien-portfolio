@@ -3,53 +3,55 @@ import clsx from 'clsx'
 import Button from '../Button'
 
 export default (props) => {
-    const {
-        className,
-        /**
-         * '' (default) | 'big-column-gap'
-         */
-        mode,
-        /**
-         * 'circle' | 'circle-large'
-         */
-        buttonMode,
-    } = props
+  const {
+    className,
+    /**
+     * '' (default) | 'big-column-gap'
+     */
+    mode,
+    /**
+     * 'circle' | 'circle-large'
+     */
+    buttonMode,
+  } = props
 
-    const socialsLinks = [
-        {
-            label: 'Facebook',
-            iconName: 'facebook',
-        },
-        {
-            label: 'Twitter',
-            iconName: 'twitter',
-        },
-        {
-            label: 'LinkedIn',
-            iconName: 'linked-in',
-        },
-    ]
+  const socialsLinks = [
+    {
+      label: 'Facebook',
+      iconName: 'facebook',
+    },
+    {
+      label: 'Twitter',
+      iconName: 'twitter',
+    },
+    {
+      label: 'LinkedIn',
+      iconName: 'linked-in',
+    },
+  ]
 
-    return (
-        <div className={clsx(className, 'soc1als', {
-            [`soc1als--${mode}`]: mode,
-        })}>
-            <ul className="soc1als__list">
-                {socialsLinks.map(({ label, iconName }, index) => (
-                    <li className="soc1als__item" key={index}>
-                        <Button
-                            className="soc1als__link"
-                            href="/"
-                            target="_blank"
-                            mode={buttonMode}
-                            label={label}
-                            isLabelVisible
-                            iconName={iconName}
-                            hasFill
-                        />
-                    </li>
-                ))}
-            </ul>
-        </div>
-    )
+  return (
+    <div
+      className={clsx(className, 'soc1als', {
+        [`soc1als--${mode}`]: mode,
+      })}
+    >
+      <ul className="soc1als__list">
+        {socialsLinks.map(({ label, iconName }, index) => (
+          <li className="soc1als__item" key={index}>
+            <Button
+              className="soc1als__link"
+              href="/"
+              target="_blank"
+              mode={buttonMode}
+              label={label}
+              isLabelVisible
+              iconName={iconName}
+              hasFill
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
 }

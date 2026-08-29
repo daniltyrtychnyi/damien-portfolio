@@ -1,12 +1,12 @@
 .button {
   @include flex-center(true);
 
-  column-gap: 5px;
   position: relative;
+  column-gap: 5px;
   padding: fluid-to-laptop(16, 14) fluid-to-laptop(24, 20);
   font-weight: 500;
-  white-space: nowrap;
   color: var(--color-white);
+  white-space: nowrap;
   background: var(--color-dark-12);
   border: none;
   border-radius: var(--border-radius-m);
@@ -26,18 +26,18 @@
 
     @include abs-cover;
 
-    content: '';
     padding: 1px;
     pointer-events: none;
+    content: '';
     background-image: linear-gradient(
-            to right bottom,
-            var(--buttonBorderGradientColorStart) 28%,
-            var(--buttonBorderGradientColorEnd) 100%
+      to right bottom,
+      var(--buttonBorderGradientColorStart) 28%,
+      var(--buttonBorderGradientColorEnd) 100%
     );
     border-radius: inherit;
     mask:
-            linear-gradient(var(--color-black) 0 0) content-box exclude,
-            linear-gradient(var(--color-black) 0 0);
+      linear-gradient(var(--color-black) 0 0) content-box exclude,
+      linear-gradient(var(--color-black) 0 0);
   }
 
   &--circle,

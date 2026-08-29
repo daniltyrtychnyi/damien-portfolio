@@ -1,7 +1,7 @@
 .feature {
   display: flex;
-  align-items: center;
   column-gap: fluid(10, 4);
+  align-items: center;
   padding: fluid(20, 14);
   border: var(--border);
   border-radius: var(--border-radius-l);
@@ -21,7 +21,7 @@
   }
 
   &__label {
-    text-transform: uppercase;
     color: var(--color-grey-70);
+    text-transform: uppercase;
   }
 }

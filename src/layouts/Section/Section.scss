@@ -14,9 +14,9 @@
 
     &:has(.section__actions) {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       gap: 20px;
+      align-items: center;
+      justify-content: space-between;
 
       @include tablet {
         flex-direction: column;
@@ -34,8 +34,8 @@
   &__main {
     display: flex;
     flex-direction: column;
-    align-items: start;
     row-gap: 20px;
+    align-items: start;
 
     @include tablet {
       display: contents;
@@ -45,8 +45,8 @@
   &__info {
     display: flex;
     flex-direction: column;
-    align-items: start;
     row-gap: fluid-to-laptop(4, 2);
+    align-items: start;
     text-transform: uppercase;
   }
 
@@ -60,8 +60,8 @@
   &__extra {
     display: flex;
     flex-direction: column;
-    align-items: start;
     row-gap: fluid-to-laptop(6, 2);
+    align-items: start;
 
     @include tablet {
       order: 1;
@@ -81,7 +81,7 @@
 
   &__actions {
     display: flex;
-    align-items: center;
     column-gap: fluid-to-laptop(30, 20);
+    align-items: center;
   }
 }

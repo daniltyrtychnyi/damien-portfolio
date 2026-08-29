@@ -3,15 +3,15 @@ import Reviews from '@/sections/Reviews'
 import Journey from '@/sections/Journey'
 
 export const metadata = {
-    title: 'About Me',
+  title: 'About Me',
 }
 
 export default () => {
-    return (
-        <>
-            <AboutHero />
-            <Journey />
-            <Reviews />
-        </>
-    )
+  return (
+    <>
+      <AboutHero />
+      <Journey />
+      <Reviews />
+    </>
+  )
 }

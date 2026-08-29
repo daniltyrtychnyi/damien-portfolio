@@ -1,8 +1,8 @@
 .field {
   display: flex;
   flex-direction: column;
-  align-items: start;
   row-gap: fluid-to-laptop(10, 6);
+  align-items: start;
 
   &__label {
     color: var(--color-grey-90);
@@ -36,7 +36,7 @@
     }
 
     &:user-invalid {
-      border-color: var(--color-error)
+      border-color: var(--color-error);
     }
 
     &:user-valid {
@@ -51,8 +51,8 @@
   &__errors {
     display: flex;
     flex-direction: column;
-    align-items: start;
     row-gap: 5px;
+    align-items: start;
   }
 
   &__error {

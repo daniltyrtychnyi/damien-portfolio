@@ -3,8 +3,8 @@
     &[open] {
       .accordion__indicator {
         svg {
-          rotate: 180deg;
           color: var(--color-white);
+          rotate: 180deg;
         }
       }
 
@@ -16,14 +16,14 @@
 
   &__summary {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     column-gap: 30px;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     color: var(--color-grey-70);
-    list-style: none;
-    user-select: none;
     cursor: pointer;
+    user-select: none;
+    list-style: none;
     transition-duration: var(--transition-duration);
 
     @include hover {

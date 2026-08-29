@@ -3,15 +3,15 @@ import Contact from '@/sections/Contact'
 import Reviews from '@/sections/Reviews'
 
 export const metadata = {
-    title: 'Contact',
+  title: 'Contact',
 }
 
 export default () => {
-    return (
-        <>
-            <ContactHero />
-            <Contact />
-            <Reviews />
-        </>
-    )
+  return (
+    <>
+      <ContactHero />
+      <Contact />
+      <Reviews />
+    </>
+  )
 }

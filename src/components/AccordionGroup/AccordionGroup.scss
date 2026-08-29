@@ -8,9 +8,9 @@
   }
 
   &__item {
-    break-inside: avoid-column;
     padding: fluid(30, 20) fluid(50, 24);
     border-bottom: var(--border);
+    break-inside: avoid-column;
 
     &:last-child {
       border-bottom: none;

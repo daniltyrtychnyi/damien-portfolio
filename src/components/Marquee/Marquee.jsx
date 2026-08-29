@@ -3,29 +3,22 @@ import clsx from 'clsx'
 import MarqueeList from './components/MarqueeList'
 
 export default (props) => {
-    const {
-        className,
-    } = props
+  const { className } = props
 
-    const labels = [
-        'Event Photography',
-        'Commercial Photography',
-        'Product Photography',
-        'Wedding Photography',
-        'Landscape Photography',
-        'Branding Photography',
-        'Portrait  Photography'
-    ]
+  const labels = [
+    'Event Photography',
+    'Commercial Photography',
+    'Product Photography',
+    'Wedding Photography',
+    'Landscape Photography',
+    'Branding Photography',
+    'Portrait  Photography',
+  ]
 
-    return (
-        <div className={clsx(className, 'marquee')}>
-            <MarqueeList
-                labels={labels}
-            />
-            <MarqueeList
-                labels={labels}
-                hidden
-            />
-        </div>
-    )
+  return (
+    <div className={clsx(className, 'marquee')}>
+      <MarqueeList labels={labels} />
+      <MarqueeList labels={labels} hidden />
+    </div>
+  )
 }

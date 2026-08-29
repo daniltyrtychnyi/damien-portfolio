@@ -1,3 +1,3 @@
 export default (attrSelector) => {
-    return attrSelector.slice(1, -1)
+  return attrSelector.slice(1, -1)
 }

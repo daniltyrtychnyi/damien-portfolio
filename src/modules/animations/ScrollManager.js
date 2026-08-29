@@ -3,16 +3,18 @@ import SmoothScroll from './SmoothScroll'
 import ScrollSync from './ScrollSync'
 
 class ScrollManager {
-    constructor() {
-        if (MatchMedia.reducedMotion.matches) return
-
-        this.init()
+  constructor() {
+    if (MatchMedia.reducedMotion.matches) {
+      return
     }
 
-    init() {
-        this.smoothScroll = new SmoothScroll()
-        new ScrollSync(this.smoothScroll.lenis)
-    }
+    this.init()
+  }
+
+  init() {
+    this.smoothScroll = new SmoothScroll()
+    new ScrollSync(this.smoothScroll.lenis)
+  }
 }
 
 export default ScrollManager

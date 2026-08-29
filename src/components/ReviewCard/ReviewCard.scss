@@ -1,15 +1,15 @@
 .review-card {
   position: relative;
+  z-index: 1;
   display: grid;
   row-gap: fluid(30, 20);
-  padding: fluid(40, 24);
-  z-index: 1;
   min-width: 358px;
   height: 100%;
+  padding: fluid(40, 24);
+  overflow: hidden;
   background-color: var(--color-dark-06);
   border: var(--border);
   border-radius: var(--border-radius-l);
-  overflow: hidden;
 
   @include laptop {
     border-radius: var(--border-radius-m);
@@ -27,9 +27,9 @@
 
   &__header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     column-gap: 10px;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__name,
@@ -56,10 +56,10 @@
       @include abs-cover;
 
       clip-path: polygon(
-              0 0,
-              var(--ratingStarsClipEnd) 0,
-              var(--ratingStarsClipEnd) 100%,
-              0 100%
+        0 0,
+        var(--ratingStarsClipEnd) 0,
+        var(--ratingStarsClipEnd) 100%,
+        0 100%
       );
     }
   }

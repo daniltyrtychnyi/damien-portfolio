@@ -3,8 +3,8 @@
 
   &__main {
     display: grid;
-    align-items: center;
     column-gap: 10px;
+    align-items: center;
     text-transform: uppercase;
 
     @include laptop-s {
@@ -29,8 +29,8 @@
   &__body {
     display: flex;
     flex-direction: column;
-    align-items: start;
     row-gap: fluid-to-laptop(10, 4);
+    align-items: start;
   }
 
   &__subtitle {

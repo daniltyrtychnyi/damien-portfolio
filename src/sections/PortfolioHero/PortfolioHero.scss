@@ -2,28 +2,28 @@
   &__partners {
     display: grid;
     row-gap: fluid-to-laptop(18, 14);
-    text-align: center;
     padding-top: fluid(80, 40);
+    text-align: center;
 
     &-title {
-      font-weight: 500;
       font-size: fluid-to-laptop(16, 14);
-      text-transform: uppercase;
+      font-weight: 500;
       color: inherit;
+      text-transform: uppercase;
     }
 
     &-wrapper {
       padding-block: fluid(30, 14);
+      overflow: hidden;
       background-color: var(--color-dark-06);
       border-block: var(--border);
-      overflow: hidden;
     }
 
     &-list {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       column-gap: 20px;
+      align-items: center;
+      justify-content: space-between;
 
       @include mobile-s {
         translate: -64%;

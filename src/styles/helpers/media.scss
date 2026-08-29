@@ -71,7 +71,7 @@ $mobile-s: 479.98px;
     }
   }
 
-  @if ($hasActiveEffectOnMobile) {
+  @if $hasActiveEffectOnMobile {
     @media (any-hover: none) {
       &:active {
         @content;

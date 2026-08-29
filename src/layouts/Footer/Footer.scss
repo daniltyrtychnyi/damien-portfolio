@@ -13,10 +13,11 @@
       @include laptop-s-above {
         @include square(fluid-to-laptop(200, 187));
 
-        content: '';
         position: absolute;
         top: 25%;
-        background: url('@/assets/images/footer/decor.svg') center/cover no-repeat;
+        content: '';
+        background: url('@/assets/images/footer/decor.svg') center/cover
+          no-repeat;
       }
     }
 
@@ -27,8 +28,8 @@
 
     &::after {
       right: 0;
-      translate: 80%;
       rotate: 180deg;
+      translate: 80%;
     }
 
     &-column {
@@ -102,9 +103,9 @@
 
     &-inner {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       gap: 16px;
+      align-items: center;
+      justify-content: space-between;
       padding-block: 20px;
 
       @include tablet {
@@ -119,8 +120,8 @@
     &-item {
       &:not(:last-child) {
         &::after {
-          content: '';
           margin-inline: fluid-to-laptop(11, 8);
+          content: '';
           border-right: var(--border);
         }
       }

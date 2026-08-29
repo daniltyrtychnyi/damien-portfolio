@@ -4,16 +4,16 @@ import PortfolioHero from '@/sections/PortfolioHero'
 import PortfolioCollections from '@/sections/PortfolioCollections'
 
 export const metadata = {
-    title: 'Portfolio',
+  title: 'Portfolio',
 }
 
 export default () => {
-    return (
-        <>
-            <PortfolioHero />
-            <PortfolioCollections />
-            <Questions />
-            <Reviews />
-        </>
-    )
+  return (
+    <>
+      <PortfolioHero />
+      <PortfolioCollections />
+      <Questions />
+      <Reviews />
+    </>
+  )
 }

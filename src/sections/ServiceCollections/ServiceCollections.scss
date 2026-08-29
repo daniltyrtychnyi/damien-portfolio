@@ -4,8 +4,8 @@
 
   &__header {
     display: grid;
-    align-items: center;
     gap: 30px fluid-to-laptop(50, 40);
+    align-items: center;
     padding-block: fluid(80, 30);
     border-top: var(--border);
 
@@ -17,8 +17,8 @@
   &__info {
     display: flex;
     flex-direction: column;
-    align-items: start;
     row-gap: fluid(50, 24);
+    align-items: start;
   }
 
   &__title {
@@ -32,8 +32,8 @@
 
   &__service {
     display: grid;
-    align-items: center;
     gap: 30px fluid-to-laptop(100, 80);
+    align-items: center;
     padding-block: fluid(80, 40);
     border-top: var(--border);
 
@@ -54,8 +54,8 @@
 
     &-pricing {
       display: flex;
-      align-items: center;
       column-gap: fluid-to-laptop(20, 14);
+      align-items: center;
 
       @include tablet {
         justify-content: space-between;

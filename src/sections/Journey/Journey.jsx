@@ -3,50 +3,56 @@ import Section from '@/layouts/Section'
 import TimeCard from '@/components/TimeCard'
 
 export default () => {
-    const journeyItems = [
-        {
-            year: 2005,
-            description: 'In 2005, Damien acquired her first camera, igniting her passion for photography. She started experimenting with landscapes and candid shots, marking the beginning of her visual storytelling journey.',
-        },
-        {
-            year: 2010,
-            description: 'Damien pursued a degree in Fine Arts with a focus on photography, refining her technical skills and artistic sensibilities. ',
-        },
-        {
-            year: 2012,
-            description: 'In 2012, Damien held her first solo exhibition, showcasing her unique perspective on nature and people through her lens.',
-        },
-        {
-            year: 2015,
-            description: 'Damien officially launched her photography business in 2015, offering portrait, event, and commercial photography services.',
-        },
-        {
-            year: 2017,
-            description: 'Damien\'s work took her beyond the USA, capturing breathtaking scenes and cultures from around the world.',
-        },
-        {
-            year: 2020,
-            description: 'In 2020, Damien\'s dedication and creativity earned her several prestigious photography awards, solidifying her position as a visionary photographer.',
-        },
-    ]
+  const journeyItems = [
+    {
+      year: 2005,
+      description:
+        'In 2005, Damien acquired her first camera, igniting her passion for photography. She started experimenting with landscapes and candid shots, marking the beginning of her visual storytelling journey.',
+    },
+    {
+      year: 2010,
+      description:
+        'Damien pursued a degree in Fine Arts with a focus on photography, refining her technical skills and artistic sensibilities. ',
+    },
+    {
+      year: 2012,
+      description:
+        'In 2012, Damien held her first solo exhibition, showcasing her unique perspective on nature and people through her lens.',
+    },
+    {
+      year: 2015,
+      description:
+        'Damien officially launched her photography business in 2015, offering portrait, event, and commercial photography services.',
+    },
+    {
+      year: 2017,
+      description:
+        "Damien's work took her beyond the USA, capturing breathtaking scenes and cultures from around the world.",
+    },
+    {
+      year: 2020,
+      description:
+        "In 2020, Damien's dedication and creativity earned her several prestigious photography awards, solidifying her position as a visionary photographer.",
+    },
+  ]
 
-    return (
-        <Section
-            className="journey"
-            titleId="journey-title"
-            subTitle="Journey"
-            title="Damien's Journey - A Timeline"
-            extraAttrs={{
-                'data-js-journey': '',
-            }}
-        >
-            <ul className="journey__list">
-                {journeyItems.map((journeyItem, index) => (
-                    <li className="journey__item" key={index} data-js-journey-item="">
-                        <TimeCard {...journeyItem} />
-                    </li>
-                ))}
-            </ul>
-        </Section>
-    )
+  return (
+    <Section
+      className="journey"
+      titleId="journey-title"
+      subTitle="Journey"
+      title="Damien's Journey - A Timeline"
+      extraAttrs={{
+        'data-js-journey': '',
+      }}
+    >
+      <ul className="journey__list">
+        {journeyItems.map((journeyItem, index) => (
+          <li className="journey__item" key={index} data-js-journey-item="">
+            <TimeCard {...journeyItem} />
+          </li>
+        ))}
+      </ul>
+    </Section>
+  )
 }

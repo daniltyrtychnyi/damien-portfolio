@@ -1,8 +1,8 @@
 .services {
   &__wrapper {
     display: grid;
-    align-items: center;
     column-gap: fluid-to-laptop(50, 40);
+    align-items: center;
 
     @include laptop-s-above {
       grid-template-columns: repeat(2, 1fr);

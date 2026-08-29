@@ -3,15 +3,15 @@ import ServiceCollections from '@/sections/ServiceCollections'
 import Questions from '@/sections/Questions'
 
 export const metadata = {
-    title: 'Services',
+  title: 'Services',
 }
 
 export default () => {
-    return (
-        <>
-            <ServicesHero />
-            <ServiceCollections />
-            <Questions />
-        </>
-    )
+  return (
+    <>
+      <ServicesHero />
+      <ServiceCollections />
+      <Questions />
+    </>
+  )
 }

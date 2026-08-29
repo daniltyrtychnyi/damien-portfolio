@@ -14,27 +14,29 @@ import PortfolioCollectionsAnimationsCollection from '@/sections/PortfolioCollec
 import ServiceCollectionsAnimationsCollection from '@/sections/ServiceCollections/ServiceCollections.animations'
 
 class Animations {
-    constructor() {
-        if (MatchMedia.reducedMotion.matches) return
-
-        this.init()
+  constructor() {
+    if (MatchMedia.reducedMotion.matches) {
+      return
     }
 
-    init() {
-        new ScrollManager()
-        new HomeHeroAnimations()
-        new SectionAnimationsCollection()
-        new AboutAnimations()
-        new ServicesAnimations()
-        new PortfolioAnimations()
-        new QuestionsAnimations()
-        new ReviewsAnimations()
-        new BrandAnimations()
-        new PageHeroAnimations()
-        new JourneyAnimations()
-        new PortfolioCollectionsAnimationsCollection()
-        new ServiceCollectionsAnimationsCollection()
-    }
+    this.init()
+  }
+
+  init() {
+    new ScrollManager()
+    new HomeHeroAnimations()
+    new SectionAnimationsCollection()
+    new AboutAnimations()
+    new ServicesAnimations()
+    new PortfolioAnimations()
+    new QuestionsAnimations()
+    new ReviewsAnimations()
+    new BrandAnimations()
+    new PageHeroAnimations()
+    new JourneyAnimations()
+    new PortfolioCollectionsAnimationsCollection()
+    new ServiceCollectionsAnimationsCollection()
+  }
 }
 
 export default Animations

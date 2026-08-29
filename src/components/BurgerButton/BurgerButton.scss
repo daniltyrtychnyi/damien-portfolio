@@ -3,15 +3,15 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: end;
   row-gap: 4px;
+  align-items: end;
+  justify-content: center;
   padding: 20px;
   background-color: transparent;
   border: var(--border);
   border-right: none;
   border-bottom: none;
-  border-radius: 20px 0 0 0;
+  border-radius: 20px 0 0;
 
   @include hover {
     background-color: var(--color-purple-60);
@@ -32,8 +32,8 @@
       }
 
       &:last-child {
-        translate: 50%;
         opacity: 0;
+        translate: 50%;
       }
     }
   }

@@ -1,9 +1,9 @@
 .underline-link {
   padding-block: 6px;
   font-weight: 500;
-  border-bottom: var(--border-dark-20);
   text-transform: uppercase;
   white-space: nowrap;
+  border-bottom: var(--border-dark-20);
 
   @include hover {
     border-color: var(--color-purple-60);
@@ -11,8 +11,8 @@
 
   &:has(.underline-link__icon) {
     display: flex;
-    align-items: center;
     column-gap: fluid-to-laptop(10, 4);
+    align-items: center;
 
     .underline-link__icon {
       @include square(fluid-to-laptop(24, 20));

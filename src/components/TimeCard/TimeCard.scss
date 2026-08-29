@@ -1,14 +1,14 @@
 .time-card {
   position: relative;
+  z-index: 1;
   display: grid;
   row-gap: fluid(20, 10);
-  padding: fluid(50, 24);
   height: 100%;
-  z-index: 1;
+  padding: fluid(50, 24);
+  overflow: hidden;
   background-color: var(--color-dark-06);
   border: var(--border);
   border-radius: var(--border-radius-l);
-  overflow: hidden;
 
   @include laptop {
     border-radius: var(--border-radius-m);

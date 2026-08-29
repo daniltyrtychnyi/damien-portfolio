@@ -1,7 +1,9 @@
 const pxToRem = (pixels) => {
-    const rootFontSize = parseInt(getComputedStyle(document.documentElement).fontSize)
+  const rootFontSize = parseInt(
+    getComputedStyle(document.documentElement).fontSize,
+  )
 
-    return pixels / rootFontSize
+  return pixels / rootFontSize
 }
 
 export default pxToRem

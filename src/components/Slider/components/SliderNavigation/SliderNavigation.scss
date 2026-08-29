@@ -1,21 +1,21 @@
 .slider-navigation {
   display: flex;
-  align-items: center;
   column-gap: fluid-to-laptop(16, 12);
-  padding: fluid-to-laptop(10, 8);
+  align-items: center;
   max-width: fluid-to-laptop(160, 124);
+  padding: fluid-to-laptop(10, 8);
   background-color: var(--color-dark-03);
   border: var(--border);
   border-radius: 100px;
 
   @include laptop-s {
-    margin-top: 40px;
     margin-inline: auto;
+    margin-top: 40px;
   }
 
   &--offset {
-    margin-top: calc(#{fluid(40, 15)} * -1);
     margin-inline: auto;
+    margin-top: calc(#{fluid(40, 15)} * -1);
   }
 
   &__button {

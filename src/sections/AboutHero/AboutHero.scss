@@ -2,8 +2,8 @@
   &__biography {
     display: grid;
     row-gap: fluid(40, 20);
-    margin-top: fluid(100, 60);
     padding-block: fluid(80, 40);
+    margin-top: fluid(100, 60);
     border-block: var(--border);
 
     &-title {

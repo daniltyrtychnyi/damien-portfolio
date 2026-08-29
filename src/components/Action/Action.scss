@@ -6,8 +6,8 @@
   &:has(.action__bottom) {
     display: flex;
     flex-direction: column;
-    align-items: start;
     row-gap: fluid-to-laptop(10, 4);
+    align-items: start;
   }
 
   @include hover {
@@ -20,16 +20,16 @@
 
   &__top {
     display: flex;
-    align-items: center;
     column-gap: 10px;
+    align-items: center;
   }
 
   &__title {
     @include fluid-text(58, 28);
 
     font-weight: 600;
-    text-transform: uppercase;
     color: var(--color-white);
+    text-transform: uppercase;
   }
 
   &__icon {

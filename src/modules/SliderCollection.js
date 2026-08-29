@@ -1,107 +1,107 @@
 import Swiper from 'swiper'
-import {Navigation, Keyboard, A11y} from 'swiper/modules'
+import { Navigation, Keyboard, A11y } from 'swiper/modules'
 import getConfig from '@/utils/getConfig'
 import MatchMedia from '@/constants/MatchMedia'
 
 const rootSelector = '[data-js-slider]'
 
 class Slider {
-    selectors = {
-        root: rootSelector,
-        swiper: '[data-js-slider-swiper]',
-        navigation: '[data-js-slider-navigation]',
-        previousButton: '[data-js-slider-previous-button]',
-        nextButton: '[data-js-slider-next-button]',
+  selectors = {
+    root: rootSelector,
+    swiper: '[data-js-slider-swiper]',
+    navigation: '[data-js-slider-navigation]',
+    previousButton: '[data-js-slider-previous-button]',
+    nextButton: '[data-js-slider-next-button]',
+  }
+
+  constructor(rootElement) {
+    this.rootElement = rootElement
+    this.swiperElement = this.rootElement.querySelector(this.selectors.swiper)
+    this.config = getConfig(this.rootElement, this.selectors.root)
+
+    const { previousButton, nextButton } = this.getButtonsFromNavigation()
+
+    this.init(previousButton, nextButton)
+
+    if (this.config.navigationTargetElementId) {
+      this.bindEvents()
     }
+  }
 
-    constructor(rootElement) {
-        this.rootElement = rootElement
-        this.swiperElement = this.rootElement.querySelector(this.selectors.swiper)
-        this.config = getConfig(this.rootElement, this.selectors.root)
+  init(previousButton, nextButton) {
+    this.swiper = new Swiper(this.swiperElement, {
+      ...this.config.sliderConfig,
+      modules: [Navigation, Keyboard, A11y],
+      loop: true,
+      navigation: {
+        prevEl: previousButton,
+        nextEl: nextButton,
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      a11y: {
+        prevSlideMessage: 'Previous Slide',
+        nextSlideMessage: 'Next Slide',
+      },
+    })
+  }
 
-        const {
-            previousButton,
-            nextButton,
-        } = this.getButtonsFromNavigation()
+  getButtonsFromNavigation(isLaptopDevice = MatchMedia.laptop.matches) {
+    const isNavigationOutside = Boolean(this.config.navigationTargetElementId)
+    const isNavigationInternal = !isNavigationOutside || isLaptopDevice
 
-        this.init(previousButton, nextButton)
+    const navigationElement = isNavigationInternal
+      ? this.rootElement.querySelector(this.selectors.navigation)
+      : document.getElementById(this.config.navigationTargetElementId)
 
-        if (this.config.navigationTargetElementId) {
-            this.bindEvents()
-        }
+    const previousButton = navigationElement.querySelector(
+      this.selectors.previousButton,
+    )
+    const nextButton = navigationElement.querySelector(
+      this.selectors.nextButton,
+    )
+
+    return {
+      previousButton,
+      nextButton,
     }
+  }
 
-    init(previousButton, nextButton) {
-        this.swiper = new Swiper(this.swiperElement, {
-            ...this.config.sliderConfig,
-            modules: [Navigation, Keyboard, A11y],
-            loop: true,
-            navigation: {
-                prevEl: previousButton,
-                nextEl: nextButton,
-            },
-            keyboard: {
-                enabled: true,
-                onlyInViewport: true,
-            },
-            a11y: {
-                prevSlideMessage: 'Previous Slide',
-                nextSlideMessage: 'Next Slide',
-            },
-        })
-    }
+  updateSwiperNavigation(previousButton, nextButton) {
+    this.swiper.navigation.destroy()
 
-    getButtonsFromNavigation(isLaptopDevice = MatchMedia.laptop.matches) {
-        const isNavigationOutside = Boolean(this.config.navigationTargetElementId)
-        const isNavigationInternal = !isNavigationOutside || isLaptopDevice
+    this.swiper.params.navigation.prevEl = previousButton
+    this.swiper.params.navigation.nextEl = nextButton
 
-        const navigationElement = isNavigationInternal
-            ? this.rootElement.querySelector(this.selectors.navigation)
-            : document.getElementById(this.config.navigationTargetElementId)
+    this.swiper.navigation.init()
+    this.swiper.navigation.update()
+  }
 
-        const previousButton = navigationElement.querySelector(this.selectors.previousButton)
-        const nextButton = navigationElement.querySelector(this.selectors.nextButton)
+  onLaptopMatchMediaChange = (event) => {
+    const { previousButton, nextButton } = this.getButtonsFromNavigation(
+      event.matches,
+    )
 
-        return {
-            previousButton,
-            nextButton,
-        }
-    }
+    this.updateSwiperNavigation(previousButton, nextButton)
+  }
 
-    updateSwiperNavigation(previousButton, nextButton) {
-        this.swiper.navigation.destroy()
-
-        this.swiper.params.navigation.prevEl = previousButton
-        this.swiper.params.navigation.nextEl = nextButton
-
-        this.swiper.navigation.init()
-        this.swiper.navigation.update()
-    }
-
-    onLaptopMatchMediaChange = (event) => {
-        const {
-            previousButton,
-            nextButton,
-        } = this.getButtonsFromNavigation(event.matches)
-
-        this.updateSwiperNavigation(previousButton, nextButton)
-    }
-
-    bindEvents() {
-        MatchMedia.laptop.addEventListener('change', this.onLaptopMatchMediaChange)
-    }
+  bindEvents() {
+    MatchMedia.laptop.addEventListener('change', this.onLaptopMatchMediaChange)
+  }
 }
 
 class SliderCollection {
-    constructor() {
-        this.init()
-    }
+  constructor() {
+    this.init()
+  }
 
-    init() {
-        document.querySelectorAll(rootSelector).forEach((element) => {
-            new Slider(element)
-        })
-    }
+  init() {
+    document.querySelectorAll(rootSelector).forEach((element) => {
+      new Slider(element)
+    })
+  }
 }
 
 export default SliderCollection

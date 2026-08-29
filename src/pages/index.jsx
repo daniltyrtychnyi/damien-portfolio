@@ -6,18 +6,18 @@ import Questions from '@/sections/Questions'
 import Reviews from '@/sections/Reviews'
 
 export const metadata = {
-    title: 'Home',
+  title: 'Home',
 }
 
 export default () => {
   return (
     <>
-        <HomeHero />
-        <About />
-        <Services />
-        <Portfolio />
-        <Questions />
-        <Reviews />
+      <HomeHero />
+      <About />
+      <Services />
+      <Portfolio />
+      <Questions />
+      <Reviews />
     </>
   )
 }
