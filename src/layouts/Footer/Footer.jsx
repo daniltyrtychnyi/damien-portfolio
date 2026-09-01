@@ -2,23 +2,28 @@ import './Footer.scss'
 import Socials from '@/components/Socials'
 import Action from '@/components/Action'
 import UnderlineLink from '@/components/UnderlineLink'
+import getPagePath from '@/utils/getPagePath'
 
 export default () => {
   const menuItems = [
     {
       title: 'Home',
+      href: '/',
       links: ['About Me', 'My Works', 'Testimonials'],
     },
     {
       title: 'Clients',
+      href: '/',
       links: ['Klovesto', 'Nukeway', 'Cloven’s', 'MenVol'],
     },
     {
       title: 'Portfolio',
+      href: '/portfolio',
       links: ['Events', 'Portrait', 'Branding', 'Commerciale', 'Wedding'],
     },
     {
       title: 'Services',
+      href: '/services',
       links: ['Portraits', 'Events', 'Commercial'],
     },
   ]
@@ -34,16 +39,16 @@ export default () => {
           </p>
           <Action
             className="footer__action"
-            href="/"
+            href="/contact"
             title="Let’s"
             subTitle="Work Together"
           />
         </div>
         <div className="footer__main-column">
           <nav className="footer__menu">
-            {menuItems.map(({ title, links }, index) => (
+            {menuItems.map(({ title, href, links }, index) => (
               <div className="footer__menu-column" key={index}>
-                <a className="footer__menu-title" href="/">
+                <a className="footer__menu-title" href={getPagePath(href)}>
                   {title}
                 </a>
                 {links?.length > 0 && (
@@ -68,7 +73,7 @@ export default () => {
           <ul className="footer__extra-list">
             {extraLinks.map((link, index) => (
               <li className="footer__extra-item" key={index}>
-                <a href="/" className="footer__extra-link">
+                <a href={getPagePath('/')} className="footer__extra-link">
                   {link}
                 </a>
               </li>

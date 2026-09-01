@@ -19,7 +19,7 @@ class SectionAnimations {
 
     this.infoElement = this.rootElement.querySelector(this.selectors.info)
     this.extraInfoElement = this.rootElement.querySelector(
-      this.selectors.extraInfo,
+      this.selectors.extraInfo
     )
     this.actionsElement = this.rootElement.querySelector(this.selectors.actions)
     this.animate()
@@ -45,13 +45,13 @@ class SectionAnimations {
       timeline,
       this.extraInfoElement,
       { x: -30, opacity: 0, duration: 1 },
-      '<',
+      '<'
     )
     this.addTween(
       timeline,
       this.actionsElement,
       { x: 30, opacity: 0, duration: 1 },
-      '<',
+      '<'
     )
   }
 }

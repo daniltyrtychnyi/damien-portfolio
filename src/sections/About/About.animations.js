@@ -24,16 +24,18 @@ class AboutAnimations {
 
     timeline
       .from(this.imageElement, {
-        y: 70,
+        x: -10,
+        opacity: 0,
         duration: 1,
       })
       .from(
         this.bodyElement,
         {
-          y: 80,
+          x: 10,
+          opacity: 0,
           duration: 1,
         },
-        '<',
+        '<'
       )
   }
 }

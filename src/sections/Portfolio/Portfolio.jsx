@@ -12,12 +12,13 @@ export default () => {
       titleId="portfolio-title"
       subTitle="Portfolio"
       title="Explore My photography work."
-      sliderProps={{
+      sliderNavigationProps={{
         sliderId,
         isLaptopSHidden: true,
       }}
       buttonProps={{
         label: 'View All Works',
+        href: '/portfolio',
       }}
       extraAttrs={{
         'data-js-portfolio': '',

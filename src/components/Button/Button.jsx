@@ -28,7 +28,7 @@ export default (props) => {
   const { Component, specificProps } = getPropsFromPolymorphicTag(
     href,
     target,
-    type,
+    type
   )
   const title = isLabelVisible ? label : undefined
   const iconComponent = iconName && (

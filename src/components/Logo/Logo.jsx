@@ -1,6 +1,7 @@
 import './Logo.scss'
 import clsx from 'clsx'
 import logo from '@/assets/images/logo.svg'
+import getPagePath from '@/utils/getPagePath'
 
 export default (props) => {
   const { className, loading = 'lazy' } = props
@@ -10,7 +11,7 @@ export default (props) => {
   return (
     <a
       className={clsx(className, 'logo')}
-      href="/"
+      href={getPagePath('/')}
       title={title}
       aria-label={title}
     >

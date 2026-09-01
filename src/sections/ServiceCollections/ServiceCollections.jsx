@@ -75,7 +75,7 @@ export default () => {
                             {
                               [`service-collections__service-price--${mode}`]:
                                 mode,
-                            },
+                            }
                           )}
                         >
                           {price}
@@ -93,7 +93,7 @@ export default () => {
               </div>
             </section>
           )
-        },
+        }
       )}
     </div>
   )

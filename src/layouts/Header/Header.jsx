@@ -3,6 +3,7 @@ import Logo from '@/components/Logo'
 import clsx from 'clsx'
 import Button from '@/components/Button'
 import BurgerButton from '@/components/BurgerButton'
+import getPagePath from '@/utils/getPagePath'
 
 export default (props) => {
   const { url } = props
@@ -42,7 +43,7 @@ export default (props) => {
                     className={clsx('header__menu-link', {
                       'is-active': href === url,
                     })}
-                    href={href}
+                    href={getPagePath(href)}
                   >
                     {label}
                   </a>

@@ -10,7 +10,7 @@ export default ({ env }) => {
       postcssPxToRem({
         propList: ['*'],
         mediaQuery: true,
-      }),
+      })
     )
 
     plugins.push(postcssPresetEnv())

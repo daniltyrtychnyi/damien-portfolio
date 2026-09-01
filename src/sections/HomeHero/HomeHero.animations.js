@@ -37,7 +37,7 @@ class HomeHeroAnimations {
           scale: 0.4,
           duration: 1,
         },
-        '<0.2',
+        '<0.2'
       )
       .fromTo(
         this.bodyElement,
@@ -49,7 +49,7 @@ class HomeHeroAnimations {
           y: 0,
           opacity: 1,
           duration: 1,
-        },
+        }
       )
       .fromTo(
         this.actionElement,
@@ -62,7 +62,7 @@ class HomeHeroAnimations {
           opacity: 1,
           duration: 1,
         },
-        '<0.2',
+        '<0.2'
       )
   }
 }

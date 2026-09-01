@@ -13,6 +13,7 @@ export default () => {
       title="I am Damien"
       buttonProps={{
         label: 'Know More',
+        href: '/about',
       }}
     >
       <div className="about__main" data-js-about="">
@@ -66,10 +67,13 @@ export default () => {
                 buttonMode="circle"
               />
               <div className="about__actions">
-                <Button className="about__button" href="/" label="Let’s Work" />
                 <Button
                   className="about__button"
-                  href="/src/assets/icons/star.svg"
+                  href="/contact"
+                  label="Let’s Work"
+                />
+                <Button
+                  className="about__button"
                   label="Download CV"
                   download
                 />

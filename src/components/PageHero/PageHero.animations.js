@@ -18,10 +18,10 @@ class PageHeroAnimations {
 
     this.imageElement = this.rootElement.querySelector(this.selectors.image)
     this.headerMainElement = this.rootElement.querySelector(
-      this.selectors.headerMain,
+      this.selectors.headerMain
     )
     this.metricItemElements = this.rootElement.querySelectorAll(
-      this.selectors.metricItem,
+      this.selectors.metricItem
     )
     this.scrollElement = this.rootElement.querySelector(this.selectors.scroll)
     this.animate()
@@ -43,7 +43,7 @@ class PageHeroAnimations {
           opacity: 0,
           duration: 1,
         },
-        '<',
+        '<'
       )
       .from(
         this.scrollElement,
@@ -52,7 +52,7 @@ class PageHeroAnimations {
           opacity: 0,
           duration: 1,
         },
-        '<',
+        '<'
       )
 
     this.metricItemElements.forEach((metricItem) => {
@@ -62,7 +62,7 @@ class PageHeroAnimations {
           opacity: 0,
           duration: 1,
         },
-        '<0.15',
+        '<0.15'
       )
     })
   }

@@ -6,36 +6,38 @@ import {
   pluginImage,
   pluginEntry,
 } from 'minista'
-import path from 'path'
+import { fileURLToPath, URL } from 'node:url'
 
-export default defineConfig({
-  server: {
-    host: '127.0.0.1',
-    port: 3000,
-  },
-  plugins: [
-    pluginSsg(),
-    pluginBundle(),
-    pluginSprite(),
-    pluginImage(),
-    pluginEntry(),
-  ],
-  resolve: {
-    alias: [
-      {
-        find: '@/',
-        replacement: path.resolve('src') + '/',
-      },
+export default defineConfig(({ mode }) => {
+  const isProd = mode === 'production'
+
+  return {
+    base: isProd ? '/damien-portfolio/' : '/',
+    server: {
+      host: '127.0.0.1',
+      port: 3000,
+    },
+    plugins: [
+      pluginSsg(),
+      pluginBundle(),
+      pluginSprite(),
+      pluginImage(),
+      pluginEntry(),
     ],
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `
-          @use '@/styles/helpers' as *;
-        `,
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
-    devSourcemap: true,
-  },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+          @use '@/styles/helpers' as *;
+        `,
+        },
+      },
+      devSourcemap: true,
+    },
+  }
 })

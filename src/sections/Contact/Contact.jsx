@@ -2,15 +2,16 @@ import './Contact.scss'
 import UnderlineLink from '@/components/UnderlineLink'
 import Field from '@/components/Field'
 import Action from '@/components/Action'
+import getPagePath from '@/utils/getPagePath'
 
 export default () => {
   const titleId = 'contact-title'
 
   const contactItems = [
-    { label: '+1-123-456-7890', href: 'tel:+11234567890' },
+    { label: '+1-123-456-7890', href: `${getPagePath('tel:+11234567890')}` },
     {
       label: 'info@damienbraunphotography.com',
-      href: 'mailto:info@damienbraunphotography.com',
+      href: `${getPagePath('mailto:info@damienbraunphotography.com')}`,
     },
   ]
 
@@ -97,7 +98,7 @@ export default () => {
               type="textarea"
               isRequired
               minLength={10}
-              maxLength={15}
+              maxLength={1000}
               autoComplete="off"
             />
           </div>

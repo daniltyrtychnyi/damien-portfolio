@@ -21,7 +21,7 @@ export default (props) => {
   const { Component, specificProps } = getPropsFromPolymorphicTag(
     href,
     target,
-    type,
+    type
   )
 
   return (

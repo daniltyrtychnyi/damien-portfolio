@@ -57,10 +57,10 @@ class Slider {
       : document.getElementById(this.config.navigationTargetElementId)
 
     const previousButton = navigationElement.querySelector(
-      this.selectors.previousButton,
+      this.selectors.previousButton
     )
     const nextButton = navigationElement.querySelector(
-      this.selectors.nextButton,
+      this.selectors.nextButton
     )
 
     return {
@@ -81,7 +81,7 @@ class Slider {
 
   onLaptopMatchMediaChange = (event) => {
     const { previousButton, nextButton } = this.getButtonsFromNavigation(
-      event.matches,
+      event.matches
     )
 
     this.updateSwiperNavigation(previousButton, nextButton)

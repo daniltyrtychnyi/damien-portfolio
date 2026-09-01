@@ -15,18 +15,34 @@ export default () => {
       titleId="services-title"
       subTitle="Services"
       title="My Photography Services"
-      sliderProps={{
+      sliderNavigationProps={{
         sliderId,
         isLaptopSHidden: true,
       }}
       buttonProps={{
         label: 'View All Services',
+        href: '/services',
       }}
       extraAttrs={{
         'data-js-services': '',
       }}
     >
-      <Slider navigationTargetElementId={sliderId} isLaptopSVisible>
+      <Slider
+        navigationTargetElementId={sliderId}
+        sliderConfig={{
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          breakpoints: {
+            1024: {
+              allowTouchMove: false,
+            },
+            1441: {
+              allowTouchMove: false,
+            },
+          },
+        }}
+        isLaptopSVisible
+      >
         {servicesItems.map(
           ({ title, description, imgSrc, features }, index) => (
             <div className="services__wrapper" key={index}>
@@ -59,7 +75,7 @@ export default () => {
                 data-js-services-image=""
               />
             </div>
-          ),
+          )
         )}
       </Slider>
     </Section>

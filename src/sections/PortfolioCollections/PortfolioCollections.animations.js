@@ -39,7 +39,7 @@ class PortfolioCollectionsAnimations {
           opacity: 0,
           duration: 1,
         },
-        '<',
+        '<'
       )
       .from(
         this.itemElements,
@@ -48,7 +48,7 @@ class PortfolioCollectionsAnimations {
           duration: 1,
           stagger: 0.2,
         },
-        '<',
+        '<'
       )
   }
 }

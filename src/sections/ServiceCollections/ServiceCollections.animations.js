@@ -19,7 +19,7 @@ class ServiceCollectionsAnimations {
 
     this.headerElement = this.rootElement.querySelector(this.selectors.header)
     this.activeSlideElement = this.rootElement.querySelector(
-      this.selectors.activeSlide,
+      this.selectors.activeSlide
     )
     this.animate()
   }
@@ -40,7 +40,7 @@ class ServiceCollectionsAnimations {
           opacity: 0,
           duration: 1,
         },
-        '<',
+        '<'
       )
   }
 }

@@ -17,16 +17,16 @@ class ServicesAnimations {
     }
 
     this.activeSlideElement = this.rootElement.querySelector(
-      this.selectors.activeSlide,
+      this.selectors.activeSlide
     )
     this.infoElement = this.activeSlideElement.querySelector(
-      this.selectors.info,
+      this.selectors.info
     )
     this.featureElements = this.activeSlideElement.querySelectorAll(
-      this.selectors.feature,
+      this.selectors.feature
     )
     this.imageElement = this.activeSlideElement.querySelector(
-      this.selectors.image,
+      this.selectors.image
     )
     this.animate()
   }
@@ -45,7 +45,7 @@ class ServicesAnimations {
           y: 40,
           duration: 1,
         },
-        '<',
+        '<'
       )
       .from(
         this.featureElements,
@@ -54,7 +54,7 @@ class ServicesAnimations {
           duration: 0.5,
           stagger: 0.2,
         },
-        '<0.2',
+        '<0.2'
       )
   }
 }

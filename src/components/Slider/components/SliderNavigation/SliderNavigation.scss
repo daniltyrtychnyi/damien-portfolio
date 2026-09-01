@@ -19,8 +19,7 @@
   }
 
   &__button {
-    @include square(fluid-to-laptop(62, 48));
-
+    padding: fluid-to-laptop(14, 10);
     border-radius: 50%;
 
     .button__icon {

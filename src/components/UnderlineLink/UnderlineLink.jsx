@@ -1,5 +1,6 @@
 import './UnderlineLink.scss'
 import clsx from 'clsx'
+import getPagePath from '@/utils/getPagePath'
 
 export default (props) => {
   const {
@@ -18,7 +19,7 @@ export default (props) => {
       className={clsx(className, 'underline-link', {
         [`underline-link--${mode}`]: mode,
       })}
-      href={href}
+      href={getPagePath(href)}
     >
       <span>{label}</span>
       {hasArrow && (

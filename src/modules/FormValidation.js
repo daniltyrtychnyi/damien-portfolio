@@ -24,14 +24,14 @@ class FormValidation {
 
   manageErrors(fieldControlElement, errorMessages) {
     const fieldErrorsElement = fieldControlElement.parentElement.querySelector(
-      this.selectors.fieldErrors,
+      this.selectors.fieldErrors
     )
 
     fieldErrorsElement.innerHTML = errorMessages
       .map(
         (errorMessage) => `
                 <span class="field__error">${errorMessage}</span>
-            `,
+            `
       )
       .join('')
   }
@@ -45,7 +45,7 @@ class FormValidation {
         if (errors[errorType]) {
           errorMessages.push(getErrorMessage(fieldControlElement))
         }
-      },
+      }
     )
 
     this.manageErrors(fieldControlElement, errorMessages)
@@ -66,7 +66,7 @@ class FormValidation {
 
   onSubmit = (event) => {
     const fieldControlElements = [...this.rootElement.elements].filter(
-      ({ required }) => required,
+      ({ required }) => required
     )
     let isFormValid = true
     let firstInvalidFieldControlElement = null

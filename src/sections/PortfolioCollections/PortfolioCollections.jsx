@@ -75,7 +75,7 @@ export default () => {
                 {portfolioCollectionItem.items.map(
                   (portfolioCardItem, index) => (
                     <PortfolioCard {...portfolioCardItem} key={index} />
-                  ),
+                  )
                 )}
               </Slider>
             </div>

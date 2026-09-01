@@ -12,12 +12,13 @@ export default () => {
       titleId="reviews-title"
       subTitle="Testimonials"
       title="What My Clients Say"
-      sliderProps={{
+      sliderNavigationProps={{
         sliderId,
         isLaptopSHidden: true,
       }}
       buttonProps={{
         label: 'View All Testimonials',
+        href: '/',
       }}
       extraInfo={{
         label: 'Total Reviews',

@@ -15,7 +15,7 @@ class InputMask {
 
   init() {
     const mask = this.rootElement.getAttribute(
-      getAttrNameFromSelector(rootSelector),
+      getAttrNameFromSelector(rootSelector)
     )
 
     IMask(this.rootElement, { mask })

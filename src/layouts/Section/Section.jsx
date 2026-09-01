@@ -13,7 +13,7 @@ export default (props) => {
     titleId,
     subTitle,
     title,
-    sliderProps = null,
+    sliderNavigationProps = null,
     buttonProps = null,
     extraInfo = null,
     children,
@@ -44,15 +44,18 @@ export default (props) => {
             </div>
           )}
         </div>
-        {(sliderProps || buttonProps) && (
+        {(sliderNavigationProps || buttonProps) && (
           <div className="section__actions" data-js-section-actions="">
-            {sliderProps && (
-              <SliderNavigation id={sliderProps.sliderId} isLaptopSHidden />
+            {sliderNavigationProps && (
+              <SliderNavigation
+                id={sliderNavigationProps.sliderId}
+                isLaptopSHidden
+              />
             )}
             {buttonProps && (
               <Button
                 className="section__button"
-                href="/"
+                href={buttonProps.href}
                 label={buttonProps.label}
                 iconName="arrow-right-long"
                 iconPosition="after"

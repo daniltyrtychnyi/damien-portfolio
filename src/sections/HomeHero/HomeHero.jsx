@@ -26,7 +26,7 @@ export default () => {
         />
         <Action
           className="hero__action"
-          href="/"
+          href="/contact"
           title="Let’s"
           subTitle="Work Together"
           extraAttrs={{
